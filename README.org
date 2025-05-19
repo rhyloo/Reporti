@@ -1,0 +1,26 @@
+#+title: Reporti
+
+* Motivation
+When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others...). My favorite and inspiration/copy is Texas Instruments.
+
+I really enjoy reading the docs from them!
+
+I would like to understand how their docs are made, which is the department that do them and why they are not using LaTeX... 
+
+* About code
+Just trying to keep it simple. A .cls file based on report class.
+
+About features, the cover can be customize with the next commands:
+#+begin_src LaTeX
+\type{Name of doc type}
+\code{Project Number/Code} % For more info. Look for naming conventions
+\titulo{Project title} 
+\autor{Author}
+\subtitulo{Subtitle}
+\resumen{Summary}
+\notes{Some notes in Cover}
+\contact{Contact footnote}
+#+end_src
+
+* About images
+The file ~Logo-EII-horizontal.pdf~ doesn't have any type of LICENSE on the [[https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/][web]]. As master's student I can use, maybe you don't, be careful with it.
