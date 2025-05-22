@@ -140,13 +140,35 @@
 % 4. Document Font
 % ========================
 \setmainfont{FreeSans}
+
 % ========================
 % 4. Estilos de Títulos
 % ========================
 \setlength{\headsep}{5pt} % Ajusta según necesidad para evitar warnings
-\titleformat{\section}{\bfseries}{\thesection}{0.75cm}{}
-\titleformat{\subsection}{\bfseries}{\thesubsection}{0.75em}{}
-\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{0.75em}{}
+
+% Definir formato de títulos
+\titleformat{\section}
+  {\large\bfseries} % Formato del texto
+  {\thesection.\hspace{2em}}   % Etiqueta: Número + 4em de espacio
+  {0pt}                        % Separación entre etiqueta y título
+  {}                           % Código antes del título
+
+\titleformat{\subsection}
+  {\large\itshape\bfseries}
+  {\thesubsection.\hspace{1.25em}} % 3em de espacio
+  {0pt}
+  {}
+
+\titleformat{\subsubsection}
+  {\bfseries}
+  {\hspace{3.5em}} % 2em de espacio
+  {0pt}
+  {}
+
+% Ajustar espaciado vertical (opcional)
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\subsection}{0pt}{12pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{12pt}{6pt}
 
 % ========================
 % 5. Metadatos del Documento
