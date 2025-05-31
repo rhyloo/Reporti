@@ -27,148 +27,16 @@
 \RequirePackage{datetime2}     % Manejo de fechas profesional
 \RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{etoolbox}      % Utilidades de macros
+\RequirePackage{tabularx}
+\RequirePackage{float}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage{tocloft}
 
 % Configuración de datetime2 para español
 \DTMsetup{useregional=numeric}
-%% \DTMlangsetup[spanish]{%
-%%   month={Enero,Febrero,Marzo,Abril,Mayo,Junio,%
-%%          Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre}
-%% }
 
-% ========================
-% 3. Diseño de Página
-% ========================
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-
-\setlength{\headheight}{33pt} % 32.05278pt mínimo requerido + margen de seguridad
-\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
-
-\fancypagestyle{mainstyle}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{2pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \fancyhead[RE,LO]{\includegraphics[height=1cm]{Logo-EII-horizontal.pdf}}
-  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}
-    }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \thepage}}
-}
-
-\fancypagestyle{tocstyle}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{2pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \fancyhead[RE,LO]{\includegraphics[height=1cm]{Logo-EII-horizontal.pdf}}
-  \fancyhead[LE,RO]{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}
-    }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \thepage}}
-}
-
-% --- Redefinir marcas para ignorar subsecciones ---
-\renewcommand{\sectionmark}[1]{\markright{\thesection\hspace{0.5em}#1}} % Actualiza solo \rightmark
-\renewcommand{\subsectionmark}[1]{} % Subsecciones no modifican los headers
-
-
-% --- Definir toggle ---
-\newtoggle{InTocLoTLoF} % Controla TOC/LOT/LOF
-
-% --- Configurar hook condicional ---
-\AddToHook{cmd/section/before}{%
-  \iftoggle{InTocLoTLoF}{}{\clearpage} % \clearpage solo fuera de TOC/LOT/LOF
-}
-
-% --- Redefinir comandos TOC/LOT/LOF (unificar cambios) ---
-\let\oldtableofcontents\tableofcontents
-\renewcommand{\tableofcontents}{%
-  \begingroup
-  \toggletrue{InTocLoTLoF} % Activar toggle
-  \thispagestyle{tocstyle} % Estilo de página específico
-  \renewcommand{\baselinestretch}{1} % Ajuste principal (20% más de espacio)
-  \setlength{\parskip}{0pt}
-  \oldtableofcontents
-  \endgroup
-  \pagestyle{mainstyle} % Restaurar estilo
-}
-
-\let\oldlistoftables\listoftables
-\renewcommand{\listoftables}{%
-  \begingroup
-  \toggletrue{InTocLoTLoF} % Activar toggle
-  \thispagestyle{tocstyle} % Estilo de página específico
-  \renewcommand{\baselinestretch}{1} % Ajuste principal (20% más de espacio)
-  \setlength{\parskip}{0pt}
-  \oldlistoftables
-  \endgroup
-  \pagestyle{mainstyle} % Restaurar estilo
-}
-
-\let\oldlistoffigures\listoffigures
-\renewcommand{\listoffigures}{%
-  \begingroup
-  \toggletrue{InTocLoTLoF} % Activar toggle
-  \renewcommand{\baselinestretch}{1} % Ajuste principal (20% más de espacio)
-  \setlength{\parskip}{0pt}
-  \thispagestyle{tocstyle} % Estilo de página específico
-  \oldlistoffigures
-  \endgroup
-  \pagestyle{mainstyle} % Restaurar estilo
-}
-
-
-%% \AddToHook{cmd/section/before}{\clearpage}
-
-\pagestyle{mainstyle}
-
-
-\fancypagestyle{titlepagestyle}{
-  \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \fancyhf{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
-  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{
-  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}}
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \normalfont\thepage}}
-}
-
-
-% ========================
-% 4. Document Font
-% ========================
-\setmainfont{FreeSans}
-
-% ========================
-% 4. Estilos de Títulos
-% ========================
-\setlength{\headsep}{5pt} % Ajusta según necesidad para evitar warnings
-
-% Definir formato de títulos
-\titleformat{\section}
-  {\large\bfseries} % Formato del texto
-  {\thesection.\hspace{2em}}   % Etiqueta: Número + 4em de espacio
-  {0pt}                        % Separación entre etiqueta y título
-  {}                           % Código antes del título
-
-\titleformat{\subsection}
-  {\large\itshape\bfseries}
-  {\thesubsection.\hspace{1.25em}} % 3em de espacio
-  {0pt}
-  {}
-
-\titleformat{\subsubsection}
-  {\bfseries}
-  {\hspace{3.5em}} % 2em de espacio
-  {0pt}
-  {}
-
-% Ajustar espaciado vertical (opcional)
-\titlespacing{\section}{0pt}{12pt}{6pt}
-\titlespacing{\subsection}{0pt}{12pt}{6pt}
-\titlespacing{\subsubsection}{0pt}{12pt}{6pt}
+\graphicspath{{figures/}{figures/logo/}}
 
 % ========================
 % 5. Metadatos del Documento
@@ -218,13 +86,111 @@
     \def\@toc{#1}%
     \listadd{\@metadata}{TOC: #1}%  % Opcional: para mostrar en metadata
 }
+\NewDocumentCommand{\logo}{m}{%
+    \def\@logo{#1}%
+    \listadd{\@metadata}{LOGO: #1}%  % Opcional: para mostrar en metadata
+}
+
+% ========================
+% 3. Diseño de Página
+% ========================
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\setlength{\headheight}{36pt} % 32.05278pt mínimo requerido + margen de seguridad
+\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
+
+\fancypagestyle{mainstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}}
+    }
+  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}
+    }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{tocstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+    \href{www.rhyloo.com}{www.rhyloo.com}}
+    }
+  \fancyhead[LE,RO]{}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}
+    }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \thepage}}
+}
+
+% --- Redefinir marcas para ignorar subsecciones ---
+\renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
+\renewcommand{\subsectionmark}[1]{} % Subsecciones no modifican los headers
+
+
+\pagestyle{mainstyle}
+
+
+\fancypagestyle{titlepagestyle}{
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \fancyhf{}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
+  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{
+  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}}
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \normalfont\thepage}}
+}
+
+
+% ========================
+% 4. Document Font
+% ========================
+\setmainfont{FreeSans}
+
+% ========================
+% 4. Estilos de Títulos
+% ========================
+\setlength{\headsep}{5pt} % Ajusta según necesidad para evitar warnings
+
+% Definir formato de títulos
+\titleformat{\section}
+  {\large\bfseries} % Formato del texto
+  {\thesection.\hspace{2em}}   % Etiqueta: Número + 4em de espacio
+  {0pt}                        % Separación entre etiqueta y título
+  {}                           % Código antes del título
+
+\titleformat{\subsection}
+  {\large\itshape\bfseries}
+  {\thesubsection.\hspace{1.25em}} % 3em de espacio
+  {0pt}
+  {}
+
+\titleformat{\subsubsection}
+  {\bfseries}
+  {\hspace{3.5em}} % 2em de espacio
+  {0pt}
+  {}
+
+% Ajustar espaciado vertical (opcional)
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\subsection}{0pt}{12pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{12pt}{6pt}
+
 
 
 \newlength{\originalparskip}
 % ========================
 % 6. Cover
 % ========================
-\NewDocumentCommand{\cover}{O{width=0.8\textwidth} m}{%
+\NewDocumentCommand{\cover}{O{width=0.8\textwidth} O{}}{%
   \begingroup % Grupo local para cambios de espaciado
   % Save the original parskip value
   \setlength{\originalparskip}{\parskip}
@@ -234,9 +200,13 @@
   \thispagestyle{titlepagestyle} % <--- Aplica el footer
     % --------------------------
     % Cabecera con logo y datos institucionales
-    % --------------------------
-    \noindent\begin{minipage}[t]{0.4\textwidth}
-    \includegraphics[#1]{#2} 
+  % --------------------------
+  \ifdefvoid{\@logo}
+            {\vspace*{4em}}{}
+  \noindent\begin{minipage}[t]{0.4\textwidth}
+  \ifdefvoid{\@logo}
+            {}
+            {\includegraphics[#1]{\@logo}}
     %% \vspace{-1.5\baselineskip} % Alineación precisa
     \end{minipage}%
     \hfill
@@ -285,35 +255,50 @@
             {\rule{\textwidth}{1pt}}
           \end{minipage}
         }
-        \ifdefvoid{\@toc}{}{%
+        \ifstrequal{#2}{continue}{
+          \tocloftpagestyle{titlepagestyle}
           \vspace{0.75cm}
 
           \hspace{1.75cm}
           \begin{minipage}{13.6cm}
             {\fontsize{9}{35}\selectfont
-            \tableofcontents
-            \listoffigures
+              \tableofcontents
+              \vspace{1em}
+              \listoffigures
+              \vspace{1em}              
             \listoftables}
-          \end{minipage}
-        }
+          \end{minipage}}{}
         \vfill
         \ifdefvoid{\@notes}{}{%
           \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
   \end{titlepage}
   \endgroup
   \clearpage
+  \pagestyle{mainstyle}
 }
 
+\AddToHook{cmd/section/before}{%
+  \clearpage
+}
+\tocloftpagestyle{tocstyle}
+\setlength{\cftbeforesecskip}{0pt}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftdotsep}{1}% Default is 4.5
 
-% ========================
-% 7. Validación y Advertencias
-% ========================
-%% \AtBeginDocument{%
-%%     \@ifundefined{@titulo}{\ClassWarning{midocumento}{Título no definido}}{}
-%%     \@ifundefined{@autor}{\ClassWarning{midocumento}{Autor no definido}}{}
-%%     \ifdef{\@subtitulo}{}{\ClassInfo{midocumento}{Subtítulo no definido}} 
-%%     \@ifundefined{@fecha}{\def\@fecha{\DTMtoday}}{}
+
+
+%% {%
+%% \let\oldnumberline\numberline%
+%% \renewcommand{\numberline}{\figurename~\thesection-\oldnumberline}%
+%% \listoffigures%
 %% }
+
+\newlength{\mylen}
+\renewcommand{\cftfigpresnum}{\figurename\enspace\thesection-}
+%% \renewcommand{\cftfigaftersnum}{-}
+\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
+\addtolength{\cftfignumwidth}{\mylen}
+
 
 
 % ========================
@@ -331,7 +316,6 @@
 \renewcommand{\baselinestretch}{1.2} % Ajuste principal (20% más de espacio)
 
 
-
 \makeatletter
 \apptocmd{\@afterheading}{
   \vspace{-1.2\baselineskip}
@@ -340,7 +324,7 @@
 \makeatother
 
 \addto\captionsspanish{%
-  \renewcommand{\contentsname}{\centering {\hfill Contenido\hfill}}
+  \renewcommand{\contentsname}{\centering {\hfill \bfseries\normalsize Contenido\hfill}}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
 %% \renewcommand{\lstlistlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}

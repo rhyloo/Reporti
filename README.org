@@ -24,3 +24,18 @@ About features, the cover can be customize with the next commands:
 
 * About images
 The file ~Logo-EII-horizontal.pdf~ doesn't have any type of LICENSE on the [[https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/][web]]. As master's student I can use, maybe you don't, be careful with it.
+
+
+I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
+
+Do you have one for owns?? Explain in comments and discuss the best :D
+
+Examples:
+- Texas Instruments have names like: TAS5518-5261K2EVM. According to Deepseek
+  - TAS: Indicates a Texas Instruments Audio Solution
+  - 5518: The specific model number of the IC.
+  - 5261: A code unique to the EVM design
+  - K2: Likely denotes a revision or variant of the EVM
+  - EVM: Standard suffix for Evaluation Module
+
+IMO is the first part of a good story like "MarkII" or "Apollo"

@@ -1,12 +1,13 @@
-TEX = xelatex --shell-scape
+TEX = xelatex --shell-escape
 TARGET = main
 BUILD_DIR = build
+TEX_DEPS = reporti.cls $(wildcard *.sty) $(wildcard *.bib) $(wildcard img/*) # Agrega aquí tus carpetas
 
 .PHONY: all clean view
 
 all: $(TARGET).pdf
 
-$(TARGET).pdf: $(TARGET).tex
+$(TARGET).pdf: $(TARGET).tex $(TEX_DEPS)
 	@mkdir -p $(BUILD_DIR)  
 	$(TEX) -output-directory=$(BUILD_DIR) $<  
 	$(TEX) -output-directory=$(BUILD_DIR) $<  
@@ -19,7 +20,6 @@ clean:
 view: $(TARGET).pdf
 	xdg-open $(TARGET).pdf 2>/dev/null || open $(TARGET).pdf 2>/dev/null
 
-# Commit automático 
 git-save:
 	@echo "=== Guardando cambios en Git ==="
 	git add .
@@ -31,5 +31,4 @@ git-save:
 	git pull origin main 
 	git push origin main 
 
-# Limpieza + Git
 update: clean git-save
