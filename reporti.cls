@@ -285,20 +285,32 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftdotsep}{1}% Default is 4.5
 
+\renewcommand{\cftaftertoctitleskip}{2em}
+\renewcommand{\cftafterloftitleskip}{2em}
+\renewcommand{\cftafterlottitleskip}{2em}
+
+\renewcommand{\cftfigindent}{0pt}
+\renewcommand{\cftfigpresnum}{\figurename~}
+\renewcommand{\cftfigaftersnum}{.}
+\setlength{\cftfignumwidth}{5em}
+\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
+\renewcommand{\cftsecpagefont}{\normalsize}
 
 
-%% {%
-%% \let\oldnumberline\numberline%
-%% \renewcommand{\numberline}{\figurename~\thesection-\oldnumberline}%
-%% \listoffigures%
-%% }
+% =============================================
+% List of Tables Customization
+% =============================================
+% 1. Set table numbering format: section-table (e.g., 1-1)
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
 
-\newlength{\mylen}
-\renewcommand{\cftfigpresnum}{\figurename\enspace\section-}
-%% \renewcommand{\cftfigaftersnum}{-}
-\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
-\addtolength{\cftfignumwidth}{\mylen}
+% 2. Configure table entries in List of Tables
+\renewcommand{\cfttabindent}{0pt}               % Remove indentation
+\renewcommand{\cfttabpresnum}{\tablename~}      % Prefix: "Table "
+\renewcommand{\cfttabaftersnum}{.}              % Suffix: "."
+\setlength{\cfttabnumwidth}{5em}                % Width for table numbers
 
+% 3. (Optional) Set section page numbers in TOC
+\renewcommand{\cftsecpagefont}{\normalsize}     % Normal font for section page numbers
 
 
 % ========================
@@ -325,6 +337,7 @@
 
 \addto\captionsspanish{%
   \renewcommand{\contentsname}{\centering {\hfill \bfseries\normalsize Contenido\hfill}}
+  \renewcommand{\tablename}{Tabla}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
 %% \renewcommand{\lstlistlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
