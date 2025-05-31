@@ -294,7 +294,7 @@
 %% }
 
 \newlength{\mylen}
-\renewcommand{\cftfigpresnum}{\figurename\enspace\thesection-}
+\renewcommand{\cftfigpresnum}{\figurename\enspace\section-}
 %% \renewcommand{\cftfigaftersnum}{-}
 \settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
 \addtolength{\cftfignumwidth}{\mylen}
