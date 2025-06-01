@@ -1,5 +1,5 @@
 TEX = xelatex --shell-escape
-TARGET = main
+TARGET = README
 BUILD_DIR = build
 TEX_DEPS = reporti.cls $(wildcard *.sty) $(wildcard *.bib) $(wildcard img/*) # Agrega aquí tus carpetas
 

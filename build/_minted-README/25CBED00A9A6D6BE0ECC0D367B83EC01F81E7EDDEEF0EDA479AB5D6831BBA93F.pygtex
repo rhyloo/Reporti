@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{;; Prefer minted for source code export in LaTeX.}
+\PYG{p}{(}\PYG{k}{setq}\PYG{+w}{ }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}listings}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{quote}\PYG{+w}{ }\PYG{n+nv}{minted}\PYG{p}{))}
+
+\PYG{c+c1}{;; Prefex `xelatex\PYGZsq{} as the LaTeX processor.}
+\PYG{p}{(}\PYG{k}{setq}\PYG{+w}{ }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}compiler}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}xelatex\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{;; Make sure that LaTeX knows about the `minted\PYGZsq{} package: we take care}
+\PYG{c+c1}{;; of it in `org\PYGZhy{}latex\PYGZhy{}packages\PYGZhy{}alist\PYGZsq{} and we do *NOT* want to include}
+\PYG{c+c1}{;; it explicitly as a \PYGZsh{}+LATEX\PYGZus{}HEADER, since the options may differ, in}
+\PYG{c+c1}{;; which case the two inclusions will conflict.}
+\PYG{p}{(}\PYG{k}{setq}\PYG{+w}{ }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}packages\PYGZhy{}alist}\PYG{+w}{ }\PYG{o}{\PYGZsq{}}\PYG{p}{((}\PYG{l+s}{\PYGZdq{}outputdir=./build\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}minted\PYGZdq{}}\PYG{+w}{ }\PYG{n+no}{nil}\PYG{p}{)))}
+
+\PYG{c+c1}{;; `org\PYGZhy{}latex\PYGZhy{}pdf\PYGZhy{}process\PYGZsq{} is a list of shell commands. We take advantage of that}
+\PYG{c+c1}{;; to:}
+\PYG{c+c1}{;;   \PYGZhy{} create the `build\PYGZsq{} subdirectory if it is not present}
+\PYG{c+c1}{;;   \PYGZhy{} run `latexmk\PYGZsq{} with the proper options (in particular `\PYGZhy{}shell\PYGZhy{}escape\PYGZsq{} which i}
+\PYG{c+c1}{;;     necessary in order to allow the LaTeX processor to run an external program,}
+\PYG{c+c1}{;;     like `pygmentize\PYGZsq{} in the case of `minted\PYGZsq{}; and `\PYGZhy{}output\PYGZhy{}directory\PYGZsq{} to allow}
+\PYG{c+c1}{;;     all the artifacts to be sent there)}
+\PYG{c+c1}{;;   \PYGZhy{} finally, move the `.pdf\PYGZsq{} file to the parent directory of the `build\PYGZsq{} subdirectory}
+\PYG{c+c1}{;;     so that the exporter will be able to find it and not complain.}
+\PYG{c+c1}{;; Note also that `\PYGZpc{}latex\PYGZsq{} is replaced by the value of `org\PYGZhy{}latex\PYGZhy{}compiler\PYGZsq{} so we use}
+\PYG{c+c1}{;; `xelatex\PYGZsq{} as our LaTeX processor.}
+\PYG{p}{(}\PYG{k}{setq}\PYG{+w}{ }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}pdf\PYGZhy{}process}\PYG{+w}{ }\PYG{o}{\PYGZsq{}}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}mkdir \PYGZhy{}p build\PYGZdq{}}
+\PYG{+w}{                              }\PYG{l+s}{\PYGZdq{}latexmk \PYGZhy{}f \PYGZhy{}pdf \PYGZhy{}\PYGZpc{}latex \PYGZhy{}shell\PYGZhy{}escape \PYGZhy{}interaction=nonstopmode \PYGZhy{}output\PYGZhy{}directory=\PYGZpc{}o/build \PYGZpc{}f\PYGZdq{}}
+\PYG{+w}{                              }\PYG{l+s}{\PYGZdq{}mv \PYGZpc{}o/build/\PYGZpc{}b.pdf \PYGZpc{}O\PYGZdq{}}\PYG{p}{))}
+\end{Verbatim}

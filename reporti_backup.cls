@@ -1,95 +1,21 @@
-#+title: Reporti: TI-Inspired LaTeX Template.
-#+latex_class_options: 
-#+latex_class: reporti
-#+options: toc:nil author:nil date:nil title:nil ::nil prop:nil ^:nil
-#+language: es
-#+PROPERTY: header-args :results silent :tangle ./reporti.cls
-
-#+LATEX:\subtitle{LaTeX Template}
-#+LATEX:\author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
-#+LATEX:\contact{\href{mailto:jorge2@uma.es}{Feedback about the documentation.}}
-#+LATEX:\logo{rhyloo_solutions_horizontal.pdf}
-
-#+LATEX:\type{README}
-#+LATEX:\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
-
-#+LATEX:\summary{}
-
-#+LATEX:\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
-
-#+LATEX:\cover[width=1.35\textwidth][continue]
-
-
-* Motivation
-
-When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others...). My favorite and inspiration/copy is Texas Instruments.
-
-I really enjoy reading the docs from them!
-
-I would like to understand how their docs are made, which is the department that do them and why they are not using LaTeX... 
-
-* Features
-
-** Cover page
-Just trying to keep it simple. A .cls file based on report class.
-
-About features, the cover can be customize with the next commands: Check [[example_config]]
-
-#+NAME: example_config
-#+CAPTION: Config commands
-#+begin_src latex :tangle no
-\type{Name of doc type}
-\code{Project Number/Code} % For more info. Look for naming conventions
-\titulo{Project title} 
-\autor{Author}
-\subtitulo{Subtitle}
-\resumen{Summary}
-\notes{Some notes in Cover}
-\contact{Contact footnote}
-#+end_src
-
-** Table
-
-** Images
-
-
-* About images
-The file ~Logo-EII-horizontal.pdf~ doesn't have any type of LICENSE on the [[https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/][web]]. As master's student I can use, maybe you don't, be careful with it.
-
-I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
-
-Do you have one for owns?? Explain in comments and discuss the best :D
-
-Examples:
-- Texas Instruments have names like: TAS5518-5261K2EVM. According to Deepseek
-  - TAS: Indicates a Texas Instruments Audio Solution
-  - 5518: The specific model number of the IC.
-  - 5261: A code unique to the EVM design
-  - K2: Likely denotes a revision or variant of the EVM
-  - EVM: Standard suffix for Evaluation Module
-
-IMO is the first part of a good story like "MarkII" or "Apollo"
-
-* Package
-** Basics on packages
-#+begin_src latex
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{reporti}[Template LaTeX based on Texas Instruments note application documentation.]
-\LoadClass[10pt, a4paper, twoside]{article}
-#+end_src
 
-** Class options
-#+begin_src latex
+% ========================
+% 1. Opciones de Clase
+% ========================
 \DeclareOption{draft}{
     \PassOptionsToPackage{draft}{graphicx}
-    \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{DRAFT}}
+    \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{BORRADOR}}
 }
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-#+end_src
 
-** Packages
-#+begin_src latex
+% ========================
+% 2. Herencia y Paquetes
+% ========================
+\LoadClass[10pt, a4paper, twoside]{article}
+
 \RequirePackage{xparse}        % Para comandos avanzados
 \RequirePackage{geometry}      % Configuración de márgenes
 \RequirePackage{fancyhdr}      % Encabezados/pies de página
@@ -110,27 +36,21 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \RequirePackage[figure,table]{totalcount}
 \RequirePackage{xstring} % Add near the top of the file
 \RequirePackage{underscore}
-\RequirePackage{longtable}
-\RequirePackage{wrapfig}
-\RequirePackage{rotating}
-\RequirePackage[normalem]{ulem}
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
-\RequirePackage{capt-of}
-\RequirePackage[outputdir=./build]{minted}
-\usemintedstyle{emacs}
-
 
 % Configuración de datetime2 para español
 \DTMsetup{useregional=numeric}
 
 \graphicspath{{figures/}{figures/logo/}}
-#+end_src
 
-** Doument Commands
-#+begin_src latex
+% ========================
+% 5. Metadatos del Documento
+% ========================
 \newcommand{\@metadata}{} % Registro de metadatos
 
+%% \NewDocumentCommand{\title}{m}{%
+%%     \def\@title{#1}%
+%%     \listadd{\@metadata}{Título: #1}%
+%% }
 \NewDocumentCommand{\autor}{m}{%
     \def\@autor{#1}%
     \listadd{\@metadata}{Autor: #1}%
@@ -431,49 +351,11 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
 %% \renewcommand{\lstlistlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
 }
+
+
+
+
 %% ---------------------------------------
 %% TODO
 %% ---------------------------------------
 %% Si no hay código eliminarlo y subir el feedback.
-#+end_src
-
-* Export Configuration                                 :noexport:
-#+begin_src emacs-lisp :tangle no
-;; Prefer minted for source code export in LaTeX.
-(setq org-latex-listings (quote minted))
-
-;; Prefex `xelatex' as the LaTeX processor.
-(setq org-latex-compiler "xelatex")
-
-;; Make sure that LaTeX knows about the `minted' package: we take care
-;; of it in `org-latex-packages-alist' and we do *NOT* want to include
-;; it explicitly as a #+LATEX_HEADER, since the options may differ, in
-;; which case the two inclusions will conflict.
-(setq org-latex-packages-alist '(("outputdir=./build" "minted" nil)))
-
-;; `org-latex-pdf-process' is a list of shell commands. We take advantage of that
-;; to:
-;;   - create the `build' subdirectory if it is not present
-;;   - run `latexmk' with the proper options (in particular `-shell-escape' which i
-;;     necessary in order to allow the LaTeX processor to run an external program,
-;;     like `pygmentize' in the case of `minted'; and `-output-directory' to allow
-;;     all the artifacts to be sent there)
-;;   - finally, move the `.pdf' file to the parent directory of the `build' subdirectory
-;;     so that the exporter will be able to find it and not complain.
-;; Note also that `%latex' is replaced by the value of `org-latex-compiler' so we use
-;; `xelatex' as our LaTeX processor.
-(setq org-latex-pdf-process '("mkdir -p build"
-                              "latexmk -f -pdf -%latex -shell-escape -interaction=nonstopmode -output-directory=%o/build %f"
-                              "mv %o/build/%b.pdf %O"))
-  #+end_src
-* COMMENT Local variables
-Local Variables:
-eval: (add-hook 'after-save-hook
-(lambda ()
-(run-with-idle-timer
-0.1 nil  ; espera 0.1 segundos antes de ejecutar el tangle
-(lambda ()
-(org-babel-tangle))))
-nil t)
-End:
-

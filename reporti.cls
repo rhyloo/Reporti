@@ -1,20 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{reporti}[Template LaTeX based on Texas Instruments note application documentation.]
+\LoadClass[10pt, a4paper, twoside]{article}
 
-% ========================
-% 1. Opciones de Clase
-% ========================
 \DeclareOption{draft}{
     \PassOptionsToPackage{draft}{graphicx}
-    \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{BORRADOR}}
+    \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{DRAFT}}
 }
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-
-% ========================
-% 2. Herencia y Paquetes
-% ========================
-\LoadClass[10pt, a4paper, twoside]{article}
 
 \RequirePackage{xparse}        % Para comandos avanzados
 \RequirePackage{geometry}      % Configuración de márgenes
@@ -32,21 +25,28 @@
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \RequirePackage{tocloft}
+\RequirePackage[tableposition=above]{caption}
+\RequirePackage[figure,table]{totalcount}
+\RequirePackage{xstring} % Add near the top of the file
+\RequirePackage{underscore}
+\RequirePackage{longtable}
+\RequirePackage{wrapfig}
+\RequirePackage{rotating}
+\RequirePackage[normalem]{ulem}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{capt-of}
+\RequirePackage[outputdir=./build]{minted}
+\usemintedstyle{emacs}
+
 
 % Configuración de datetime2 para español
 \DTMsetup{useregional=numeric}
 
 \graphicspath{{figures/}{figures/logo/}}
 
-% ========================
-% 5. Metadatos del Documento
-% ========================
 \newcommand{\@metadata}{} % Registro de metadatos
 
-\NewDocumentCommand{\titulo}{m}{%
-    \def\@titulo{#1}%
-    \listadd{\@metadata}{Título: #1}%
-}
 \NewDocumentCommand{\autor}{m}{%
     \def\@autor{#1}%
     \listadd{\@metadata}{Autor: #1}%
@@ -55,14 +55,14 @@
     \def\@fecha{#1}%
     \listadd{\@metadata}{Fecha: #1}%
 }
-\NewDocumentCommand{\resumen}{m}{%
-    \def\@resumen{#1}%
-    \ifx\@resumen\@empty\else
-        \gappto\@afterabstract{\@printresumen}%
+\NewDocumentCommand{\summary}{m}{%
+    \def\@summary{#1}%
+    \ifx\@summary\@empty\else
+        \gappto\@afterabstract{\@printsummary}%
     \fi
 }
-\NewDocumentCommand{\subtitulo}{m}{%
-    \def\@subtitulo{#1}%
+\NewDocumentCommand{\subtitle}{m}{%
+    \def\@subtitle{#1}%
     \listadd{\@metadata}{Subtítulo: #1}%  % Opcional: para mostrar en metadata
 }
 \NewDocumentCommand{\type}{m}{%
@@ -70,9 +70,9 @@
     \listadd{\@metadata}{Type: #1}%  % Opcional: para mostrar en metadata
 }
 
-\NewDocumentCommand{\code}{m}{%
-    \def\@code{#1}%
-    \listadd{\@metadata}{Code: #1}%  % Opcional: para mostrar en metadata
+\NewDocumentCommand{\projectcode}{m}{%
+    \def\@projectcode{#1}%
+    \listadd{\@metadata}{Projectcode: #1}%  % Opcional: para mostrar en metadata
 }
 \NewDocumentCommand{\notes}{m}{%
     \def\@notes{#1}%
@@ -96,7 +96,7 @@
 % ========================
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-\setlength{\headheight}{36pt} % 32.05278pt mínimo requerido + margen de seguridad
+\setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
 \geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
 
 \fancypagestyle{mainstyle}{
@@ -105,14 +105,14 @@
   \renewcommand{\footrulewidth}{1.5pt}
   \ifdefvoid{\@logo}{}{%
     \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-      \href{www.rhyloo.com}{www.rhyloo.com}}
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
     }
   \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
     }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \thepage}}
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
 }
 
 \fancypagestyle{tocstyle}{
@@ -124,11 +124,11 @@
     \href{www.rhyloo.com}{www.rhyloo.com}}
     }
   \fancyhead[LE,RO]{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
     }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \thepage}}
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
 }
 
 % --- Redefinir marcas para ignorar subsecciones ---
@@ -143,10 +143,10 @@
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{1.5pt}
   \fancyhf{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@titulo}}
-  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}}}}{
-  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@code}{}{\@code}\\\itshape\@contact}}}
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@titulo \hspace{0.8cm} \normalfont\thepage}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{
+  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}}
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \normalfont\thepage}}
 }
 
 
@@ -158,6 +158,7 @@
 % ========================
 % 4. Estilos de Títulos
 % ========================
+\setlength{\voffset}{10pt} % Ajusta según necesidad para evitar warnings
 \setlength{\headsep}{5pt} % Ajusta según necesidad para evitar warnings
 
 % Definir formato de títulos
@@ -214,36 +215,36 @@
       \vspace{-2\baselineskip} % Alineación precisa
       \raggedleft
       \ifdef{\@type}{\fontsize{14}{35}\selectfont\itshape\@type}{}\par
-      \ifdef{\@code}{\fontsize{9}{35}\selectfont\itshape\@code}{}
+      \ifdef{\@projectcode}{\fontsize{9}{35}\selectfont\itshape\@projectcode}{}
 
     \end{minipage}
     
     \vspace{0.5\baselineskip} % Alineación precisa
 
     \begin{flushright}
-      {\fontsize{18}{35}\selectfont\bfseries\itshape\@titulo}
+      {\fontsize{18}{35}\selectfont\bfseries\itshape\@title}
     \end{flushright}
     \vspace*{-1\baselineskip} % Reduce espacio posterior
         {\rule{\textwidth}{2pt}}
 
         \noindent\begin{minipage}{0.7\textwidth}
         \raggedright
-        \ifdef{\@autor}{%
-          {\fontsize{10}{35}\selectfont\itshape\@autor}
+        \ifdef{\@author}{%
+          {\fontsize{10}{35}\selectfont\itshape\@author}
         }{}
         \end{minipage}
         \hfill
         \begin{minipage}{0.25\textwidth}
         \raggedleft
-        \ifdef{\@subtitulo}{%
-          {\fontsize{10}{35}\selectfont\itshape\@subtitulo}
+        \ifdef{\@subtitle}{%
+          {\fontsize{10}{35}\selectfont\itshape\@subtitle}
         }{}
         \end{minipage}
 
         % --------------------------
-        % Resumen condicional
+        % Summary condicional
         % --------------------------
-        \ifdefvoid{\@resumen}{}{%
+        \ifdefvoid{\@summary}{}{%
           \vspace{0.75cm}
 
           \hspace{1.75cm}
@@ -251,7 +252,7 @@
             \begin{center}
               \noindent{\bfseries ABSTRACT}
               \end{center}
-            {\fontsize{10}{35}\selectfont\@resumen}\par
+            {\fontsize{10}{35}\selectfont\@summary}\par
             {\rule{\textwidth}{1pt}}
           \end{minipage}
         }
@@ -264,9 +265,13 @@
             {\fontsize{9}{35}\selectfont
               \tableofcontents
               \vspace{1em}
+              \iftotalfigures
               \listoffigures
-              \vspace{1em}              
-            \listoftables}
+              \fi
+              \vspace{1em}
+              \iftotaltables
+              \listoftables
+              \fi}
           \end{minipage}}{}
         \vfill
         \ifdefvoid{\@notes}{}{%
@@ -342,10 +347,6 @@
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
 %% \renewcommand{\lstlistlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
 }
-
-
-
-
 %% ---------------------------------------
 %% TODO
 %% ---------------------------------------

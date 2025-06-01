@@ -1,4 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Dimensiones y posicionamiento}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}test}{2}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Especificaciones de fabricación}{3}{section.2}%

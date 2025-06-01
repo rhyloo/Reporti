@@ -1,43 +1,51 @@
-#+title: Reporti: TI-Inspired LaTeX Template.
-#+latex_class_options: 
-#+latex_class: reporti
-#+options: toc:nil author:nil date:nil title:nil ::nil prop:nil ^:nil
-#+language: es
-#+PROPERTY: header-args :results silent :tangle ./reporti.cls
+% Created 2025-06-01 Sun 21:43
+% Intended LaTeX compiler: xelatex
+\documentclass{reporti}
+\date{}
+\title{Reporti: TI-Inspired \LaTeX{} Template.}
+\hypersetup{
+ pdfauthor={J. L. Benavides},
+ pdftitle={Reporti: TI-Inspired \LaTeX{} Template.},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={Spanish}}
+\begin{document}
 
-#+LATEX:\subtitle{LaTeX Template}
-#+LATEX:\author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
-#+LATEX:\contact{\href{mailto:jorge2@uma.es}{Feedback about the documentation.}}
-#+LATEX:\logo{rhyloo_solutions_horizontal.pdf}
+\subtitle{LaTeX Template}
+\author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
+\logo{rhyloo_solutions_horizontal.pdf}
 
-#+LATEX:\type{README}
-#+LATEX:\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
+\type{README}
+\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
 
-#+LATEX:\summary{}
+\summary{}
 
-#+LATEX:\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
+\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
 
-#+LATEX:\cover[width=1.35\textwidth][continue]
+\cover[width=1.35\textwidth][continue]
 
 
-* Motivation
+\section{Motivation}
+\label{sec:orgfba59e4}
 
-When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others...). My favorite and inspiration/copy is Texas Instruments.
+When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others\ldots{}). My favorite and inspiration/copy is Texas Instruments.
 
 I really enjoy reading the docs from them!
 
-I would like to understand how their docs are made, which is the department that do them and why they are not using LaTeX... 
+I would like to understand how their docs are made, which is the department that do them and why they are not using \LaTeX{}\ldots{} 
 
-* Features
+\section{Features}
+\label{sec:org50fb53f}
 
-** Cover page
+\subsection{Cover page}
+\label{sec:org89b5201}
 Just trying to keep it simple. A .cls file based on report class.
 
-About features, the cover can be customize with the next commands: Check [[example_config]]
+About features, the cover can be customize with the next commands: Check \ref{lst:org684c652}
 
-#+NAME: example_config
-#+CAPTION: Config commands
-#+begin_src latex :tangle no
+\begin{listing}[htbp]
+\begin{minted}[]{latex}
 \type{Name of doc type}
 \code{Project Number/Code} % For more info. Look for naming conventions
 \titulo{Project title} 
@@ -46,50 +54,63 @@ About features, the cover can be customize with the next commands: Check [[examp
 \resumen{Summary}
 \notes{Some notes in Cover}
 \contact{Contact footnote}
-#+end_src
+\end{minted}
+\caption{\label{lst:org684c652}Config commands}
+\end{listing}
 
-** Table
+\subsection{Table}
+\label{sec:orgab6ea81}
 
-** Images
+\subsection{Images}
+\label{sec:orgc3633fe}
 
 
-* About images
-The file ~Logo-EII-horizontal.pdf~ doesn't have any type of LICENSE on the [[https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/][web]]. As master's student I can use, maybe you don't, be careful with it.
+\section{About images}
+\label{sec:orgbadd380}
+The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
 
 I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
 
 Do you have one for owns?? Explain in comments and discuss the best :D
 
 Examples:
-- Texas Instruments have names like: TAS5518-5261K2EVM. According to Deepseek
-  - TAS: Indicates a Texas Instruments Audio Solution
-  - 5518: The specific model number of the IC.
-  - 5261: A code unique to the EVM design
-  - K2: Likely denotes a revision or variant of the EVM
-  - EVM: Standard suffix for Evaluation Module
+\begin{itemize}
+\item Texas Instruments have names like: TAS5518-5261K2EVM. According to Deepseek
+\begin{itemize}
+\item TAS: Indicates a Texas Instruments Audio Solution
+\item 5518: The specific model number of the IC.
+\item 5261: A code unique to the EVM design
+\item K2: Likely denotes a revision or variant of the EVM
+\item EVM: Standard suffix for Evaluation Module
+\end{itemize}
+\end{itemize}
 
 IMO is the first part of a good story like "MarkII" or "Apollo"
 
-* Package
-** Basics on packages
-#+begin_src latex
+\section{Package}
+\label{sec:org51ee1d8}
+\subsection{Basics on packages}
+\label{sec:orgf2f585d}
+\begin{minted}[]{latex}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{reporti}[Template LaTeX based on Texas Instruments note application documentation.]
 \LoadClass[10pt, a4paper, twoside]{article}
-#+end_src
+\end{minted}
 
-** Class options
-#+begin_src latex
+\subsection{Class options}
+\label{sec:orgbe6a759}
+\begin{minted}[]{latex}
 \DeclareOption{draft}{
     \PassOptionsToPackage{draft}{graphicx}
     \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{DRAFT}}
 }
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-#+end_src
+\end{minted}
 
-** Packages
-#+begin_src latex
+\subsection{Packages}
+\label{sec:org9596467}
+\begin{minted}[]{latex}
 \RequirePackage{xparse}        % Para comandos avanzados
 \RequirePackage{geometry}      % Configuración de márgenes
 \RequirePackage{fancyhdr}      % Encabezados/pies de página
@@ -125,10 +146,11 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \DTMsetup{useregional=numeric}
 
 \graphicspath{{figures/}{figures/logo/}}
-#+end_src
+\end{minted}
 
-** Doument Commands
-#+begin_src latex
+\subsection{Doument Commands}
+\label{sec:orge967a07}
+\begin{minted}[]{latex}
 \newcommand{\@metadata}{} % Registro de metadatos
 
 \NewDocumentCommand{\autor}{m}{%
@@ -435,45 +457,5 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 %% TODO
 %% ---------------------------------------
 %% Si no hay código eliminarlo y subir el feedback.
-#+end_src
-
-* Export Configuration                                 :noexport:
-#+begin_src emacs-lisp :tangle no
-;; Prefer minted for source code export in LaTeX.
-(setq org-latex-listings (quote minted))
-
-;; Prefex `xelatex' as the LaTeX processor.
-(setq org-latex-compiler "xelatex")
-
-;; Make sure that LaTeX knows about the `minted' package: we take care
-;; of it in `org-latex-packages-alist' and we do *NOT* want to include
-;; it explicitly as a #+LATEX_HEADER, since the options may differ, in
-;; which case the two inclusions will conflict.
-(setq org-latex-packages-alist '(("outputdir=./build" "minted" nil)))
-
-;; `org-latex-pdf-process' is a list of shell commands. We take advantage of that
-;; to:
-;;   - create the `build' subdirectory if it is not present
-;;   - run `latexmk' with the proper options (in particular `-shell-escape' which i
-;;     necessary in order to allow the LaTeX processor to run an external program,
-;;     like `pygmentize' in the case of `minted'; and `-output-directory' to allow
-;;     all the artifacts to be sent there)
-;;   - finally, move the `.pdf' file to the parent directory of the `build' subdirectory
-;;     so that the exporter will be able to find it and not complain.
-;; Note also that `%latex' is replaced by the value of `org-latex-compiler' so we use
-;; `xelatex' as our LaTeX processor.
-(setq org-latex-pdf-process '("mkdir -p build"
-                              "latexmk -f -pdf -%latex -shell-escape -interaction=nonstopmode -output-directory=%o/build %f"
-                              "mv %o/build/%b.pdf %O"))
-  #+end_src
-* COMMENT Local variables
-Local Variables:
-eval: (add-hook 'after-save-hook
-(lambda ()
-(run-with-idle-timer
-0.1 nil  ; espera 0.1 segundos antes de ejecutar el tangle
-(lambda ()
-(org-babel-tangle))))
-nil t)
-End:
-
+\end{minted}
+\end{document}

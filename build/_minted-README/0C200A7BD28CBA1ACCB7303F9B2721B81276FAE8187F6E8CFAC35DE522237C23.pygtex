@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}xparse\PYG{n+nb}{\PYGZcb{}}        \PYG{c}{\PYGZpc{} Para comandos avanzados}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}geometry\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Configuración de márgenes}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}fancyhdr\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Encabezados/pies de página}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}titlesec\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Estilos de secciones}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Manejo de imágenes}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[spanish]}\PYG{n+nb}{\PYGZob{}}babel\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{} Localización}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}hyperref\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Hipervínculos}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}fontspec\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Fuentes modernas}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}datetime2\PYG{n+nb}{\PYGZcb{}}     \PYG{c}{\PYGZpc{} Manejo de fechas profesional}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}xcolor\PYG{n+nb}{\PYGZcb{}}        \PYG{c}{\PYGZpc{} Manejo de colores}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}etoolbox\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Utilidades de macros}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}tabularx\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}float\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}booktabs\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}multirow\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}tocloft\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[tableposition=above]}\PYG{n+nb}{\PYGZob{}}caption\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[figure,table]}\PYG{n+nb}{\PYGZob{}}totalcount\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}xstring\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Add near the top of the file}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}underscore\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}longtable\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}wrapfig\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}rotating\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[normalem]}\PYG{n+nb}{\PYGZob{}}ulem\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}amsmath\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}amssymb\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}capt\PYGZhy{}of\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[outputdir=./build]}\PYG{n+nb}{\PYGZob{}}minted\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usemintedstyle}\PYG{n+nb}{\PYGZob{}}emacs\PYG{n+nb}{\PYGZcb{}}
+
+
+\PYG{c}{\PYGZpc{} Configuración de datetime2 para español}
+\PYG{k}{\PYGZbs{}DTMsetup}\PYG{n+nb}{\PYGZob{}}useregional=numeric\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}graphicspath}\PYG{n+nb}{\PYGZob{}\PYGZob{}}figures/\PYG{n+nb}{\PYGZcb{}\PYGZob{}}figures/logo/\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}
