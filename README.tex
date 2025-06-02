@@ -1,4 +1,4 @@
-% Created 2025-06-02 Mon 23:43
+% Created 2025-06-02 Mon 23:48
 % Intended LaTeX compiler: xelatex
 \documentclass{reporti}
 \date{}
@@ -29,7 +29,7 @@
 
 
 \section{Motivation}
-\label{sec:org3e5338d}
+\label{sec:orgdd9db1a}
 At college I read lot of documents about electronics. One of my favorites was \emph{\href{https://e2echina.ti.com/cfs-file/\_\_key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf}{Op Amps for everyone}} from Texas Instruments (TI). If you take a moment to analyse the documents in the \texttt{TI\_Examples} folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a \LaTeX{} template. To be honest with you, I don't use \LaTeX{} in my company, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write lab reports or notes for some crazy school project. :D
 
 So, here is the first version of Reporti, a Texas Instruments-inspired \LaTeX{} template for you all.
@@ -49,12 +49,12 @@ So sorry if it is a mesh on github, I recommend you read README.pdf
 \end{tcolorbox}
 
 \section{Features}
-\label{sec:org4912e33}
+\label{sec:orgac07e6b}
 \subsection{Cover page}
-\label{sec:org870aedb}
+\label{sec:org269a8ec}
 Just trying to keep it simple. A .cls file based on report class.
 
-About features, the cover can be customize with the next commands: Check \ref{lst:org99221c1}
+About features, the cover can be customize with the next commands: Check \ref{lst:orgb4a7bea}
 \begin{listing}[htbp]
 \begin{minted}[]{latex}
 \documentclass[draft]{reporti}
@@ -68,11 +68,11 @@ About features, the cover can be customize with the next commands: Check \ref{ls
 \notes{Some notes in Cover}
 \contact{Contact footnote}
 \end{minted}
-\caption{\label{lst:org99221c1}Control commands for the template}
+\caption{\label{lst:orgb4a7bea}Control commands for the template}
 \end{listing}
 
 \subsection{Table}
-\label{sec:orgc32cd2c}
+\label{sec:orgbb7bc5f}
 \begin{table}[htbp]
 \caption{Changelog}
 \centering
@@ -85,7 +85,7 @@ v0.0 & Initial release & Rhyloo\\[0pt]
 \end{tabular}
 \end{table}
 \subsection{Images}
-\label{sec:orgdc444ff}
+\label{sec:org3a0a8ba}
 \begin{figure}[htbp]
 \centering
 \includegraphics[fbox,width=.9\linewidth]{./figures/logo/rhyloo_solutions_horizontal.pdf}
@@ -93,7 +93,7 @@ v0.0 & Initial release & Rhyloo\\[0pt]
 \end{figure}
 
 \section{About images}
-\label{sec:org3ca4873}
+\label{sec:org8ccd202}
 The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
 
 I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
@@ -116,7 +116,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 
 
 \section{About document class}
-\label{sec:org4f0094e}
+\label{sec:org928e38d}
 
 \begin{minted}[]{latex}
 \NeedsTeXFormat{LaTeX2e}
@@ -134,7 +134,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \end{minted}
 
 \subsection{Packages}
-\label{sec:orga9d0014}
+\label{sec:orge6ab53c}
 I added package geometry becuase I need to config headheight, and page geometry:
 \begin{minted}[]{latex}
 \RequirePackage{geometry}      % Configuración de márgenes
@@ -249,7 +249,7 @@ Encabezados/pies de página. I defined two styles.
 \end{minted}
 
 \subsection{Doument Commands}
-\label{sec:orgc60062b}
+\label{sec:orgcaaf486}
 \begin{minted}[]{latex}
 \newcommand{\@metadata}{} % Registro de metadatos
 

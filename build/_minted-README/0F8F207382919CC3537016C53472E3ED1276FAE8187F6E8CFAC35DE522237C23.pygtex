@@ -1,0 +1,269 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Registro de metadatos}
+
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}autor}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}autor\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Autor: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fecha}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}O\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}DTMtoday}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}fecha\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Fecha: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}summary}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}summary\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}ifx\PYGZbs{}@}summary\PYG{k}{\PYGZbs{}@}empty\PYG{k}{\PYGZbs{}else}
+        \PYG{k}{\PYGZbs{}gappto\PYGZbs{}@}afterabstract\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}printsummary\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}fi}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}subtitle}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}subtitle\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Subtítulo: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}type}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}type\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Type: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}projectcode}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Projectcode: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}notes}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}notes\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Notes: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}contact}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}contact\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Contact: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}toc}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}toc\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}TOC: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}logo}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}def\PYGZbs{}@}logo\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}LOGO: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
+\PYG{n+nb}{\PYGZcb{}}
+
+
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}sectionmark}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+
+
+
+\PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{} Redefinir marcas para ignorar subsecciones \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}sectionmark}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Actualiza solo \PYGZbs{}rightmark}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}subsectionmark}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Subsecciones no modifican los headers}
+
+
+\PYG{k}{\PYGZbs{}pagestyle}\PYG{n+nb}{\PYGZob{}}mainstyle\PYG{n+nb}{\PYGZcb{}}
+
+
+\PYG{k}{\PYGZbs{}fancypagestyle}\PYG{n+nb}{\PYGZob{}}titlepagestyle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}footrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.5pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyhf}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[LE]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}thepage} \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZob{}}  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}itshape\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}  \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}normalfont\PYGZbs{}thepage}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+
+
+
+
+\PYG{c}{\PYGZpc{} ========================}
+\PYG{c}{\PYGZpc{} 4. Estilos de Títulos}
+\PYG{c}{\PYGZpc{} ========================}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}voffset}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}10pt\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Ajusta según necesidad para evitar warnings}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headsep}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}5pt\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Ajusta según necesidad para evitar warnings}
+
+\PYG{c}{\PYGZpc{} Definir formato de títulos}
+\PYG{k}{\PYGZbs{}titleformat}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}large\PYGZbs{}bfseries}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Formato del texto}
+  \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}thesection}.\PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}2em\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}   \PYG{c}{\PYGZpc{} Etiqueta: Número + 4em de espacio}
+  \PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}                        \PYG{c}{\PYGZpc{} Separación entre etiqueta y título}
+  \PYG{n+nb}{\PYGZob{}\PYGZcb{}}                           \PYG{c}{\PYGZpc{} Código antes del título}
+
+\PYG{k}{\PYGZbs{}titleformat}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}subsection}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}large\PYGZbs{}itshape\PYGZbs{}bfseries}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}thesubsection}.\PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}1.25em\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{} 3em de espacio}
+  \PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}titleformat}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}subsubsection}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}bfseries}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}3.5em\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{} 2em de espacio}
+  \PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} Ajustar espaciado vertical (opcional)}
+\PYG{k}{\PYGZbs{}titlespacing}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}12pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}6pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}titlespacing}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}subsection}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}12pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}6pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}titlespacing}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}subsubsection}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}12pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}6pt\PYG{n+nb}{\PYGZcb{}}
+
+
+
+\PYG{k}{\PYGZbs{}newlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}originalparskip}\PYG{n+nb}{\PYGZcb{}}
+\PYG{c}{\PYGZpc{} ========================}
+\PYG{c}{\PYGZpc{} 6. Cover}
+\PYG{c}{\PYGZpc{} ========================}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cover}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}O\PYG{n+nb}{\PYGZob{}}width=0.8\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}} O\PYG{n+nb}{\PYGZob{}\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}begingroup} \PYG{c}{\PYGZpc{} Grupo local para cambios de espaciado}
+  \PYG{c}{\PYGZpc{} Save the original parskip value}
+  \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}originalparskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}parskip}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}baselinestretch}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.4\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Ajuste principal (20\PYGZpc{} más de espacio)}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}parskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}originalparskip}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Ajuste principal (20\PYGZpc{} más de espacio)}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}titlepage\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}thispagestyle}\PYG{n+nb}{\PYGZob{}}titlepagestyle\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} \PYGZlt{}\PYGZhy{}\PYGZhy{}\PYGZhy{} Aplica el footer}
+    \PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+    \PYG{c}{\PYGZpc{} Cabecera con logo y datos institucionales}
+  \PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}}
+            \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}vspace*}\PYG{n+nb}{\PYGZob{}}4em\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}noindent\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}[t]\PYG{n+nb}{\PYGZob{}}0.4\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}}
+            \PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+            \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[\PYGZsh{}1]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+    \PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}vspace\PYGZob{}\PYGZhy{}1.5\PYGZbs{}baselineskip\PYGZcb{} \PYGZpc{} Alineación precisa}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}hfill}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}[t]\PYG{n+nb}{\PYGZob{}}0.6\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+      \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}2\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Alineación precisa}
+      \PYG{k}{\PYGZbs{}raggedleft}
+      \PYG{k}{\PYGZbs{}ifdef}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}type\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}14\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}itshape\PYGZbs{}@}type\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}\PYG{k}{\PYGZbs{}par}
+      \PYG{k}{\PYGZbs{}ifdef}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}itshape\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}
+
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}0.5\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Alineación precisa}
+
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}flushright\PYG{n+nb}{\PYGZcb{}}
+      \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}18\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}bfseries\PYGZbs{}itshape\PYGZbs{}@}title\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}flushright\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}vspace*}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}1\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Reduce espacio posterior}
+        \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}rule}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2pt\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+        \PYG{k}{\PYGZbs{}noindent\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.7\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}raggedright}
+        \PYG{k}{\PYGZbs{}ifdef}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}author\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+          \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}10\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}itshape\PYGZbs{}@}author\PYG{n+nb}{\PYGZcb{}}
+        \PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}hfill}
+        \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.25\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}raggedleft}
+        \PYG{k}{\PYGZbs{}ifdef}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}subtitle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+          \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}10\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}itshape\PYGZbs{}@}subtitle\PYG{n+nb}{\PYGZcb{}}
+        \PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}
+
+        \PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+        \PYG{c}{\PYGZpc{} Summary condicional}
+        \PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+        \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}summary\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+          \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}0.75cm\PYG{n+nb}{\PYGZcb{}}
+
+          \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}1.75cm\PYG{n+nb}{\PYGZcb{}}
+          \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}\PYGZob{}}13.6cm\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+              \PYG{k}{\PYGZbs{}noindent}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}bfseries} ABSTRACT\PYG{n+nb}{\PYGZcb{}}
+              \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+            \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}10\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}@}summary\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par}
+            \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}rule}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1pt\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+          \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}
+        \PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}ifstrequal}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}continue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+          \PYG{k}{\PYGZbs{}tocloftpagestyle}\PYG{n+nb}{\PYGZob{}}titlepagestyle\PYG{n+nb}{\PYGZcb{}}
+          \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}0.75cm\PYG{n+nb}{\PYGZcb{}}
+
+          \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}1.75cm\PYG{n+nb}{\PYGZcb{}}
+          \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}\PYGZob{}}13.6cm\PYG{n+nb}{\PYGZcb{}}
+            \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}
+              \PYG{k}{\PYGZbs{}tableofcontents}
+              \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1em\PYG{n+nb}{\PYGZcb{}}
+              \PYG{k}{\PYGZbs{}iftotalfigures}
+              \PYG{k}{\PYGZbs{}listoffigures}
+              \PYG{k}{\PYGZbs{}fi}
+              \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1em\PYG{n+nb}{\PYGZcb{}}
+              \PYG{k}{\PYGZbs{}iftotaltables}
+              \PYG{k}{\PYGZbs{}listoftables}
+              \PYG{k}{\PYGZbs{}fi}
+              \PYG{k}{\PYGZbs{}iftotallistings}
+              \PYG{k}{\PYGZbs{}listoflistings}
+              \PYG{k}{\PYGZbs{}fi}\PYG{n+nb}{\PYGZcb{}}
+          \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}vfill}
+        \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}notes\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+          \PYG{k}{\PYGZbs{}noindent\PYGZbs{}raggedright}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}@}notes\PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}1\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}titlepage\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}endgroup}
+  \PYG{k}{\PYGZbs{}clearpage}
+  \PYG{k}{\PYGZbs{}pagestyle}\PYG{n+nb}{\PYGZob{}}mainstyle\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}AddToHook}\PYG{n+nb}{\PYGZob{}}cmd/section/before\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}clearpage}
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}tocloftpagestyle}\PYG{n+nb}{\PYGZob{}}tocstyle\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftbeforesecskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftsecleader}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}cftdotfill}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftdotsep}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftdotsep}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{} Default is 4.5}
+
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftaftertoctitleskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2em\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftafterloftitleskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2em\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftafterlottitleskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2em\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftfigindent}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftfigpresnum}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}figurename}\PYGZti{}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftfigaftersnum}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftfignumwidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}5em\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}thefigure}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}arabic}\PYG{n+nb}{\PYGZob{}}section\PYG{n+nb}{\PYGZcb{}}\PYGZhy{}\PYG{k}{\PYGZbs{}arabic}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftsecpagefont}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}normalsize}\PYG{n+nb}{\PYGZcb{}}
+
+
+\PYG{c}{\PYGZpc{} =============================================}
+\PYG{c}{\PYGZpc{} List of Tables Customization}
+\PYG{c}{\PYGZpc{} =============================================}
+\PYG{c}{\PYGZpc{} 1. Set table numbering format: section\PYGZhy{}table (e.g., 1\PYGZhy{}1)}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}thetable}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}arabic}\PYG{n+nb}{\PYGZob{}}section\PYG{n+nb}{\PYGZcb{}}\PYGZhy{}\PYG{k}{\PYGZbs{}arabic}\PYG{n+nb}{\PYGZob{}}table\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} 2. Configure table entries in List of Tables}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cfttabindent}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}               \PYG{c}{\PYGZpc{} Remove indentation}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cfttabpresnum}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tablename}\PYGZti{}\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Prefix: \PYGZdq{}Table \PYGZdq{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cfttabaftersnum}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}.\PYG{n+nb}{\PYGZcb{}}              \PYG{c}{\PYGZpc{} Suffix: \PYGZdq{}.\PYGZdq{}}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cfttabnumwidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}5em\PYG{n+nb}{\PYGZcb{}}                \PYG{c}{\PYGZpc{} Width for table numbers}
+
+\PYG{c}{\PYGZpc{} 3. (Optional) Set section page numbers in TOC}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftsecpagefont}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}normalsize}\PYG{n+nb}{\PYGZcb{}}     \PYG{c}{\PYGZpc{} Normal font for section page numbers}
+
+
+
+
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}parindent}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}50pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}baselinestretch}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.2\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Ajuste principal (20\PYGZpc{} más de espacio)}
+
+
+\PYG{k}{\PYGZbs{}makeatletter}
+\PYG{k}{\PYGZbs{}apptocmd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}afterheading\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}0.5\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}parskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}12pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeatother}
+
+\PYG{k}{\PYGZbs{}addto\PYGZbs{}captionsspanish}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}contentsname}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Contenido\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}tablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Tabla\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listfigurename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Lista de figuras\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listtablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Lista de tablas\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}addto\PYGZbs{}captionsenglish}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}contentsname}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Content\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}tablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Table\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listfigurename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} List of figures\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listtablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} List of tables\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+
+\end{Verbatim}

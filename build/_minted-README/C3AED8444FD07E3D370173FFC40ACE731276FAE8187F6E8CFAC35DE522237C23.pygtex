@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}NeedsTeXFormat}\PYG{n+nb}{\PYGZob{}}LaTeX2e\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}ProvidesClass}\PYG{n+nb}{\PYGZob{}}reporti\PYG{n+nb}{\PYGZcb{}}[Template LaTeX based on Texas Instruments note application documentation.]
+\PYG{k}{\PYGZbs{}LoadClass}\PYG{n+na}{[10pt, a4paper, twoside]}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}
