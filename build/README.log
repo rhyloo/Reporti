@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.5.18)  1 JUN 2025 21:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.5.18)  2 JUN 2025 17:55
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -26,20 +26,6 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-01-22 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
-\g__graphics_track_int=\count191
-\l__pdf_internal_box=\box51
-\g__pdf_backend_object_int=\count192
-\g__pdf_backend_annotation_int=\count193
-\g__pdf_backend_link_int=\count194
-))
-Package: xparse 2023-10-10 L3 Experimental document command parser
-)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -53,9 +39,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count195
-\Gm@cntv=\count196
-\c@Gm@tempcnt=\count197
+\Gm@cnth=\count191
+\Gm@cntv=\count192
+\c@Gm@tempcnt=\count193
 \Gm@bindingoffset=\dimen141
 \Gm@wd@mp=\dimen142
 \Gm@odd@mp=\dimen143
@@ -78,6 +64,20 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip56
 \f@nch@O@olf=\skip57
 \f@nch@O@orf=\skip58
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count194
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count195
+\g__pdf_backend_annotation_int=\count196
+\g__pdf_backend_link_int=\count197
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
@@ -272,6 +272,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 66.
+
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 
@@ -297,6 +299,39 @@ X
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: Font family 'FreeSans(0)' created for font 'FreeSans'
+(fontspec)             with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FreeSans/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FreeSans/OT:script=latn;language=dflt;+smcp;mapping=
+tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FreeSans/B/OT:script=latn;language=dflt;mapping=tex-
+text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FreeSans/B/OT:script=latn;language=dflt;+smcp;mappin
+g=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FreeSans/I/OT:script=latn;language=dflt;mapping=tex-
+text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"FreeSans/I/OT:script=latn;language=dflt;+smcp;mappin
+g=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FreeSans/BI/OT:script=latn;language=dflt;mapping=tex
+-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"FreeSans/BI/OT:script=latn;language=dflt;+smcp;mappi
+ng=tex-text;"
+
+
 (/usr/share/texlive/texmf-dist/tex/latex/datetime2/datetime2.sty
 Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
 
@@ -710,57 +745,74 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen277
 \FrameSep=\dimen278
 )
+(/usr/share/texlive/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
+Package newfloat Info: Unsupported document class, or \@chapter 
+(newfloat)             was already redefined by another package.
+Package newfloat Info: \@chapter = macro:->\def \Hy@next {\Hy@MakeCurrentHrefAu
+to {\Hy@chapapp *}\Hy@raisedlink {\hyper@anchorstart {\@currentHref }\hyper@anc
+horend }}\ifnum \c@secnumdepth >\m@ne \@ifundefined {if@mainmatter}\iftrue {\cs
+name if@mainmatter\endcsname }\let \Hy@next \relax \fi \fi \Hy@next \Hy@org@cha
+pter .
+Package newfloat Info: \Hy@org@chapter = macro:[#1]#2->\NR@gettitle {#1}\NR@cha
+pter [{#1}]{#2}.
+Package newfloat Info: \algocf@original@chapter = undefined.
+Package newfloat Info: `rotating' package detected.
+Package newfloat Info: `wrapfig' package detected.
+)
 \minted@appexistsfile=\read4
 \minted@bgbox=\box76
 \minted@code=\write4
 \c@minted@FancyVerbLineTemp=\count356
 \c@minted@pygmentizecounter=\count357
-\@float@every@listing=\toks37
+Package newfloat Info: New float `listing' with options `fileext=lol,placement=
+tbp' on input line 1221.
 \c@listing=\count358
+Package newfloat Info: float type `listing'=4 on input line 1221.
+\c@loldepth=\count359
 )
 runsystem(mkdir -p ./build/_minted-README)...executed.
 
 
-Package fontspec Info: Font family 'FreeSans(0)' created for font 'FreeSans'
-(fontspec)             with options [Ligatures=TeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FreeSans/OT:script=latn;language=dflt;mapping=tex-te
-xt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"FreeSans/OT:script=latn;language=dflt;+smcp;mapping=
-tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"FreeSans/B/OT:script=latn;language=dflt;mapping=tex-
-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"FreeSans/B/OT:script=latn;language=dflt;+smcp;mappin
-g=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"FreeSans/I/OT:script=latn;language=dflt;mapping=tex-
-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"FreeSans/I/OT:script=latn;language=dflt;+smcp;mappin
-g=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"FreeSans/BI/OT:script=latn;language=dflt;mapping=tex
--text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"FreeSans/BI/OT:script=latn;language=dflt;+smcp;mappi
-ng=tex-text;"
 
-\originalparskip=\skip109
-Package hyperref Info: Option `colorlinks' set `true' on input line 329.
+! Package tocloft Error: listing has been previously defined.
+
+See the tocloft package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 ...fseries\normalsize Lista de códigos\hfill}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\cftbeforelistingskip=\skip109
+\cftlistingindent=\skip110
+\cftlistingnumwidth=\skip111
+
+! LaTeX Error: Command \c@loldepth already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 ...fseries\normalsize Lista de códigos\hfill}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\cftbeforeloltitleskip=\skip112
+\cftafterloltitleskip=\skip113
+\originalparskip=\skip114
 )
 runsystem(command -v pygmentize && touch README.aex)...executed.
 
 runsystem(rm README.aex)...executed.
 
-
-(build/README.aux
+ (build/README.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -901,6 +953,8 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+Package newfloat Info: Trying Plan B...
+Package newfloat Info: `float' package detected.
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
 
@@ -951,7 +1005,41 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write6
 \openout6 = `README.toc'.
 
- [1
+ (build/README.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write7
+\openout7 = `README.lof'.
+
+
+! Undefined control sequence.
+<argument> ... \listoftables \fi \iftotallistings 
+                                                  \listoflistings \fi } \end...
+l.26 \cover[width=1.35\textwidth][continue]
+                                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+(build/README.lol)
+\tf@lol=\write8
+\openout8 = `README.lol'.
+
+
+! Extra \fi.
+<argument> ...iftotallistings \listoflistings \fi 
+                                                  } \end {minipage}
+l.26 \cover[width=1.35\textwidth][continue]
+                                           
+I'm ignoring this; it doesn't match any \if.
+
+[1
+
+
+
 
 ]
 LaTeX Info: Redefining \. on input line 38.
@@ -970,17 +1058,17 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 )
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 58.
+File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
  [3
 
 ]
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
  [4
@@ -999,40 +1087,51 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 \openout3 = `README.pyg'.
 
 
-(./build/_minted-README/0C200A7BD28CBA1ACCB7303F9B2721B81276FAE8187F6E8CFAC35DE
-522237C23.pygtex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(./build/_minted-README/3445B00E8F297FBA103578B571AEF7361276FAE8187F6E8CFAC35DE
+522237C23.pygtex)
+\openout3 = `README.pyg'.
 
+
+(./build/_minted-README/AAEC9762B32066C01C28C4288A3158AE1276FAE8187F6E8CFAC35DE
+522237C23.pygtex
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
-LaTeX Info: Redefining \. on input line 34.
-LaTeX Info: Redefining \% on input line 34.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
  [5
 
 ])
 \openout3 = `README.pyg'.
 
 
-(./build/_minted-README/20E3E06FB6765487885EF4C97BF10E861276FAE8187F6E8CFAC35DE
+(./build/_minted-README/31550D3E4A3001392FCC51A23DA3B10F1276FAE8187F6E8CFAC35DE
+522237C23.pygtex)
+\openout3 = `README.pyg'.
+
+
+(./build/_minted-README/1197CCBA09C4E8087036DE50D58E314A1276FAE8187F6E8CFAC35DE
+522237C23.pygtex
+LaTeX Info: Redefining \. on input line 29.
+LaTeX Info: Redefining \% on input line 29.
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [6])
+\openout3 = `README.pyg'.
+
+
+(./build/_minted-README/12032E5B4F21C4BB7CDB987E7A9719B21276FAE8187F6E8CFAC35DE
 522237C23.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 44.
-LaTeX Info: Redefining \% on input line 44.
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
  [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 140.
-LaTeX Info: Redefining \% on input line 140.
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
  [8]
@@ -1040,13 +1139,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
-LaTeX Info: Redefining \. on input line 188.
-LaTeX Info: Redefining \% on input line 188.
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
  [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
  [10]
@@ -1054,15 +1153,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
-LaTeX Info: Redefining \. on input line 284.
-LaTeX Info: Redefining \% on input line 284.
- [11])
-LaTeX Info: Redefining \. on input line 461.
-LaTeX Info: Redefining \% on input line 461.
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 258.
+LaTeX Info: Redefining \% on input line 258.
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [12])
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+LaTeX Info: Redefining \. on input line 492.
+LaTeX Info: Redefining \% on input line 492.
 
-[12] (build/README.aux
+[13] (build/README.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1076,17 +1182,17 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.72pt have occurred.
 
 Package rerunfilecheck Info: File `README.out' has not changed.
-(rerunfilecheck)             Checksum: 80FA2F38E02FA50CA7A5D9C782190F02;1156.
+(rerunfilecheck)             Checksum: 3766709ECC057514AF4D1FDE14090B60;947.
 runsystem(rm ./build//README.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 23109 strings out of 476824
- 460427 string characters out of 5803867
+ 23350 strings out of 476824
+ 467391 string characters out of 5803867
  1931627 words of memory out of 5000000
- 44646 multiletter control sequences out of 15000+600000
- 569601 words of font info for 116 fonts, out of 8000000 for 9000
+ 44870 multiletter control sequences out of 15000+600000
+ 569528 words of font info for 114 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 89i,15n,131p,597b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,15n,131p,597b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/README.xdv (12 pages, 251052 bytes).
+Output written on build/README.xdv (13 pages, 255872 bytes).

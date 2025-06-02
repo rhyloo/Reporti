@@ -1,4 +1,4 @@
-% Created 2025-06-01 Sun 21:43
+% Created 2025-06-02 Mon 17:55
 % Intended LaTeX compiler: xelatex
 \documentclass{reporti}
 \date{}
@@ -27,7 +27,7 @@
 
 
 \section{Motivation}
-\label{sec:orgfba59e4}
+\label{sec:org799a10b}
 
 When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others\ldots{}). My favorite and inspiration/copy is Texas Instruments.
 
@@ -36,14 +36,13 @@ I really enjoy reading the docs from them!
 I would like to understand how their docs are made, which is the department that do them and why they are not using \LaTeX{}\ldots{} 
 
 \section{Features}
-\label{sec:org50fb53f}
+\label{sec:orgc1f6da2}
 
 \subsection{Cover page}
-\label{sec:org89b5201}
+\label{sec:orga1c6089}
 Just trying to keep it simple. A .cls file based on report class.
 
-About features, the cover can be customize with the next commands: Check \ref{lst:org684c652}
-
+About features, the cover can be customize with the next commands: Check \ref{lst:org11c591e}
 \begin{listing}[htbp]
 \begin{minted}[]{latex}
 \type{Name of doc type}
@@ -55,18 +54,21 @@ About features, the cover can be customize with the next commands: Check \ref{ls
 \notes{Some notes in Cover}
 \contact{Contact footnote}
 \end{minted}
-\caption{\label{lst:org684c652}Config commands}
+\caption{\label{lst:org11c591e}test\_code}
 \end{listing}
 
 \subsection{Table}
-\label{sec:orgab6ea81}
-
+\label{sec:orgb8297b7}
 \subsection{Images}
-\label{sec:orgc3633fe}
-
+\label{sec:orgabbc4ba}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./figures/logo/rhyloo_solutions_horizontal.pdf}
+\caption{\label{fig:org35eccb4}testt}
+\end{figure}
 
 \section{About images}
-\label{sec:orgbadd380}
+\label{sec:orgb7763a0}
 The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
 
 I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
@@ -87,18 +89,16 @@ Examples:
 
 IMO is the first part of a good story like "MarkII" or "Apollo"
 
-\section{Package}
-\label{sec:org51ee1d8}
-\subsection{Basics on packages}
-\label{sec:orgf2f585d}
+
+\section{About document class}
+\label{sec:orgc23859a}
+
 \begin{minted}[]{latex}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{reporti}[Template LaTeX based on Texas Instruments note application documentation.]
 \LoadClass[10pt, a4paper, twoside]{article}
 \end{minted}
 
-\subsection{Class options}
-\label{sec:orgbe6a759}
 \begin{minted}[]{latex}
 \DeclareOption{draft}{
     \PassOptionsToPackage{draft}{graphicx}
@@ -109,16 +109,82 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \end{minted}
 
 \subsection{Packages}
-\label{sec:org9596467}
+\label{sec:org4ef783f}
+I added package geometry becuase I need to config headheight, and page geometry:
+\begin{minted}[]{latex}
+\RequirePackage{geometry}      % Configuración de márgenes
+\setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
+\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
+\end{minted}
+Encabezados/pies de página. I defined two styles.
+\begin{enumerate}
+\item mainstyle: Used for full document elaboration
+\item tocstyle: Used by tocs.
+\end{enumerate}
+\begin{minted}[]{latex}
+\RequirePackage{fancyhdr}      
+\fancypagestyle{mainstyle}{
+  \fancyhf{}
+  
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  
+  \ifdefvoid{\@logo}{}{
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
+  }
+  
+  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont\thepage\hspace{0.8cm}\itshape\@title}}
+  \ifdefvoid{\@contact}{
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont
+        \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+  }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{tocstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}}
+  }
+  \fancyhead[LE,RO]{}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+  }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\end{minted}
+
 \begin{minted}[]{latex}
 \RequirePackage{xparse}        % Para comandos avanzados
-\RequirePackage{geometry}      % Configuración de márgenes
-\RequirePackage{fancyhdr}      % Encabezados/pies de página
+\end{minted}
+
+\begin{minted}[]{latex}
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
 \RequirePackage[spanish]{babel}% Localización
+
 \RequirePackage{hyperref}      % Hipervínculos
+\hypersetup{
+    colorlinks = true,
+    linkcolor = blue!70!black,
+    urlcolor = blue!70!black,
+    citecolor = green!60!black
+}
+
+
 \RequirePackage{fontspec}      % Fuentes modernas
+\setmainfont{FreeSans}
+
+
+
 \RequirePackage{datetime2}     % Manejo de fechas profesional
 \RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{etoolbox}      % Utilidades de macros
@@ -126,7 +192,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \RequirePackage{float}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage{tocloft}
+\RequirePackage[titles]{tocloft}
 \RequirePackage[tableposition=above]{caption}
 \RequirePackage[figure,table]{totalcount}
 \RequirePackage{xstring} % Add near the top of the file
@@ -138,8 +204,18 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{capt-of}
-\RequirePackage[outputdir=./build]{minted}
+
+\RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
+\newlistof{listing}{lol}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+\RequirePackage{caption}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{%
+  name={Code},
+  fileext=lol}
+\renewcommand{\cftlistingpresnum}{Code~}
+\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
+\setlength{\cftlistingnumwidth}{5em}
 
 
 % Configuración de datetime2 para español
@@ -149,7 +225,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \end{minted}
 
 \subsection{Doument Commands}
-\label{sec:orge967a07}
+\label{sec:orgc1cacc4}
 \begin{minted}[]{latex}
 \newcommand{\@metadata}{} % Registro de metadatos
 
@@ -197,45 +273,11 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
     \listadd{\@metadata}{LOGO: #1}%  % Opcional: para mostrar en metadata
 }
 
-% ========================
-% 3. Diseño de Página
-% ========================
+
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-\setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
-\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
 
-\fancypagestyle{mainstyle}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{2pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \ifdefvoid{\@logo}{}{%
-    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
-    }
-  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-    }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
-}
 
-\fancypagestyle{tocstyle}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{2pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \ifdefvoid{\@logo}{}{%
-    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-    \href{www.rhyloo.com}{www.rhyloo.com}}
-    }
-  \fancyhead[LE,RO]{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-    }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
-}
 
 % --- Redefinir marcas para ignorar subsecciones ---
 \renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
@@ -256,10 +298,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 }
 
 
-% ========================
-% 4. Document Font
-% ========================
-\setmainfont{FreeSans}
+
 
 % ========================
 % 4. Estilos de Títulos
@@ -377,6 +416,9 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
               \vspace{1em}
               \iftotaltables
               \listoftables
+              \fi
+              \iftotallistings
+              \listoflistings
               \fi}
           \end{minipage}}{}
         \vfill
@@ -391,6 +433,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \AddToHook{cmd/section/before}{%
   \clearpage
 }
+
 \tocloftpagestyle{tocstyle}
 \setlength{\cftbeforesecskip}{0pt}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -424,15 +467,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \renewcommand{\cftsecpagefont}{\normalsize}     % Normal font for section page numbers
 
 
-% ========================
-% 9. Configuración de Hipervínculos
-% ========================
-\hypersetup{
-    colorlinks = true,
-    linkcolor = blue!70!black,
-    urlcolor = blue!70!black,
-    citecolor = green!60!black
-}
+
 
 \setlength{\parindent}{0pt}
 \setlength{\baselineskip}{50pt}
@@ -441,21 +476,17 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 
 \makeatletter
 \apptocmd{\@afterheading}{
-  \vspace{-1.2\baselineskip}
+  \vspace{-0.5\baselineskip}
   \setlength{\parskip}{12pt}
   }{}{}
 \makeatother
 
 \addto\captionsspanish{%
-  \renewcommand{\contentsname}{\centering {\hfill \bfseries\normalsize Contenido\hfill}}
+  \renewcommand{\contentsname}{\hfill\bfseries\normalsize Contenido\hfill}
   \renewcommand{\tablename}{Tabla}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
-\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
-%% \renewcommand{\lstlistlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
-}
-%% ---------------------------------------
-%% TODO
-%% ---------------------------------------
-%% Si no hay código eliminarlo y subir el feedback.
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
+
+
 \end{minted}
 \end{document}

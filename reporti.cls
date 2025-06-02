@@ -9,14 +9,68 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
-\RequirePackage{xparse}        % Para comandos avanzados
 \RequirePackage{geometry}      % Configuración de márgenes
-\RequirePackage{fancyhdr}      % Encabezados/pies de página
+\setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
+\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
+
+\RequirePackage{fancyhdr}      
+\fancypagestyle{mainstyle}{
+  \fancyhf{}
+  
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  
+  \ifdefvoid{\@logo}{}{
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
+  }
+  
+  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont\thepage\hspace{0.8cm}\itshape\@title}}
+  \ifdefvoid{\@contact}{
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont
+        \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+  }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{tocstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}}
+  }
+  \fancyhead[LE,RO]{}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+  }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\RequirePackage{xparse}        % Para comandos avanzados
+
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
 \RequirePackage[spanish]{babel}% Localización
+
 \RequirePackage{hyperref}      % Hipervínculos
+\hypersetup{
+    colorlinks = true,
+    linkcolor = blue!70!black,
+    urlcolor = blue!70!black,
+    citecolor = green!60!black
+}
+
+
 \RequirePackage{fontspec}      % Fuentes modernas
+\setmainfont{FreeSans}
+
+
+
 \RequirePackage{datetime2}     % Manejo de fechas profesional
 \RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{etoolbox}      % Utilidades de macros
@@ -24,7 +78,7 @@
 \RequirePackage{float}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage{tocloft}
+\RequirePackage[titles]{tocloft}
 \RequirePackage[tableposition=above]{caption}
 \RequirePackage[figure,table]{totalcount}
 \RequirePackage{xstring} % Add near the top of the file
@@ -36,8 +90,18 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{capt-of}
-\RequirePackage[outputdir=./build]{minted}
+
+\RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
+\newlistof{listing}{lol}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+\RequirePackage{caption}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{%
+  name={Code},
+  fileext=lol}
+\renewcommand{\cftlistingpresnum}{Code~}
+\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
+\setlength{\cftlistingnumwidth}{5em}
 
 
 % Configuración de datetime2 para español
@@ -91,45 +155,11 @@
     \listadd{\@metadata}{LOGO: #1}%  % Opcional: para mostrar en metadata
 }
 
-% ========================
-% 3. Diseño de Página
-% ========================
+
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-\setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
-\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
 
-\fancypagestyle{mainstyle}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{2pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \ifdefvoid{\@logo}{}{%
-    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
-    }
-  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-    }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
-}
 
-\fancypagestyle{tocstyle}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{2pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \ifdefvoid{\@logo}{}{%
-    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-    \href{www.rhyloo.com}{www.rhyloo.com}}
-    }
-  \fancyhead[LE,RO]{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
-  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-    }
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
-}
 
 % --- Redefinir marcas para ignorar subsecciones ---
 \renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
@@ -150,10 +180,7 @@
 }
 
 
-% ========================
-% 4. Document Font
-% ========================
-\setmainfont{FreeSans}
+
 
 % ========================
 % 4. Estilos de Títulos
@@ -271,6 +298,9 @@
               \vspace{1em}
               \iftotaltables
               \listoftables
+              \fi
+              \iftotallistings
+              \listoflistings
               \fi}
           \end{minipage}}{}
         \vfill
@@ -285,6 +315,7 @@
 \AddToHook{cmd/section/before}{%
   \clearpage
 }
+
 \tocloftpagestyle{tocstyle}
 \setlength{\cftbeforesecskip}{0pt}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -318,15 +349,7 @@
 \renewcommand{\cftsecpagefont}{\normalsize}     % Normal font for section page numbers
 
 
-% ========================
-% 9. Configuración de Hipervínculos
-% ========================
-\hypersetup{
-    colorlinks = true,
-    linkcolor = blue!70!black,
-    urlcolor = blue!70!black,
-    citecolor = green!60!black
-}
+
 
 \setlength{\parindent}{0pt}
 \setlength{\baselineskip}{50pt}
@@ -335,19 +358,13 @@
 
 \makeatletter
 \apptocmd{\@afterheading}{
-  \vspace{-1.2\baselineskip}
+  \vspace{-0.5\baselineskip}
   \setlength{\parskip}{12pt}
   }{}{}
 \makeatother
 
 \addto\captionsspanish{%
-  \renewcommand{\contentsname}{\centering {\hfill \bfseries\normalsize Contenido\hfill}}
+  \renewcommand{\contentsname}{\hfill\bfseries\normalsize Contenido\hfill}
   \renewcommand{\tablename}{Tabla}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
-\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
-%% \renewcommand{\lstlistlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
-}
-%% ---------------------------------------
-%% TODO
-%% ---------------------------------------
-%% Si no hay código eliminarlo y subir el feedback.
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}

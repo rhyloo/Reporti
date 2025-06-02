@@ -1,0 +1,89 @@
+% Created 2025-06-02 Mon 16:41
+% Intended LaTeX compiler: pdflatex
+\documentclass{reporti}
+\date{}
+\title{Reporti: TI-Inspired \LaTeX{} Template.}
+\hypersetup{
+ pdfauthor={J. L. Benavides},
+ pdftitle={Reporti: TI-Inspired \LaTeX{} Template.},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={English}}
+\begin{document}
+
+\subtitle{LaTeX Template}
+\author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
+\logo{rhyloo_solutions_horizontal.pdf}
+
+\type{README}
+\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
+
+\summary{}
+
+\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
+
+\cover[width=1.35\textwidth][continue]
+
+
+\section{Motivation}
+\label{sec:orgf3970ef}
+
+When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others\ldots{}). My favorite and inspiration/copy is Texas Instruments.
+
+I really enjoy reading the docs from them!
+
+I would like to understand how their docs are made, which is the department that do them and why they are not using \LaTeX{}\ldots{} 
+
+\section{Features}
+\label{sec:orge395d43}
+\subsection{Cover page}
+\label{sec:org772a77b}
+Just trying to keep it simple. A .cls file based on report class.
+
+About features, the cover can be customize with the next commands: Check
+
+\subsection{Table}
+\label{sec:orgc43452f}
+
+\subsection{Images}
+\label{sec:orgd98f186}
+
+
+\section{About images}
+\label{sec:orgc410ce6}
+The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
+
+I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
+
+Do you have one for owns?? Explain in comments and discuss the best :D
+
+Examples:
+\begin{itemize}
+\item Texas Instruments have names like: TAS5518-5261K2EVM. According to Deepseek
+\begin{itemize}
+\item TAS: Indicates a Texas Instruments Audio Solution
+\item 5518: The specific model number of the IC.
+\item 5261: A code unique to the EVM design
+\item K2: Likely denotes a revision or variant of the EVM
+\item EVM: Standard suffix for Evaluation Module
+\end{itemize}
+\end{itemize}
+
+IMO is the first part of a good story like "MarkII" or "Apollo"
+
+\section{Package}
+\label{sec:org1ad6683}
+\subsection{Basics on packages}
+\label{sec:org92dff32}
+\subsection{Class options}
+\label{sec:org2ca0c6a}
+\subsection{Packages}
+\label{sec:org22c8546}
+\subsection{Doument Commands}
+\label{sec:orgb361b17}
+\subsection{Config}
+\label{sec:orga5f192e}
+\end{document}
+
+LaTeX finished at Mon Jun  2 16:42:02

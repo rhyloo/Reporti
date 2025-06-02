@@ -1,0 +1,40 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/rhyloo/Documents/LaTeX/Reporti/README.org
+
+
+* Export Configuration                                 :noexport:
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-06-02 Mon 16:50
+:ARCHIVE_FILE: ~/Documents/LaTeX/Reporti/README.org
+:ARCHIVE_CATEGORY: README
+:END:
+#+begin_src emacs-lisp
+;; Prefer minted for source code export in LaTeX.
+(setq org-latex-listings (quote minted))
+
+;; Prefex `xelatex' as the LaTeX processor.
+(setq org-latex-compiler "xelatex")
+
+;; Make sure that LaTeX knows about the `minted' package: we take care
+;; of it in `org-latex-packages-alist' and we do *NOT* want to include
+;; it explicitly as a #+LATEX_HEADER, since the options may differ, in
+;; which case the two inclusions will conflict.
+(setq org-latex-packages-alist '(("outputdir=./build" "minted" nil)))
+
+;; `org-latex-pdf-process' is a list of shell commands. We take advantage of that
+;; to:
+;;   - create the `build' subdirectory if it is not present
+;;   - run `latexmk' with the proper options (in particular `-shell-escape' which i
+;;     necessary in order to allow the LaTeX processor to run an external program,
+;;     like `pygmentize' in the case of `minted'; and `-output-directory' to allow
+;;     all the artifacts to be sent there)
+;;   - finally, move the `.pdf' file to the parent directory of the `build' subdirectory
+;;     so that the exporter will be able to find it and not complain.
+;; Note also that `%latex' is replaced by the value of `org-latex-compiler' so we use
+;; `xelatex' as our LaTeX processor.
+(setq org-latex-pdf-process '("mkdir -p build"
+                              "latexmk -f -pdf -%latex -shell-escape -interaction=nonstopmode -output-directory=%o/build %f"
+                              "mv %o/build/%b.pdf %O"))
+  #+end_src

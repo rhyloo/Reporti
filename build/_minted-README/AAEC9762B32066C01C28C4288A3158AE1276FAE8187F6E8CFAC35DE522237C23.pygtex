@@ -1,0 +1,40 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}fancyhdr\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}fancypagestyle}\PYG{n+nb}{\PYGZob{}}mainstyle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}fancyhf}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}footrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.5pt\PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}
+    \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[height=2em]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par}
+      \PYG{k}{\PYGZbs{}href}\PYG{n+nb}{\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par\PYGZbs{}par}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[LE,RO]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nouppercase}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}rightmark}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[LE]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont\PYGZbs{}thepage\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+    \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}
+        \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}itshape\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}  \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}thepage}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}fancypagestyle}\PYG{n+nb}{\PYGZob{}}tocstyle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}fancyhf}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}footrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.5pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[height=2em]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par}
+      \PYG{k}{\PYGZbs{}href}\PYG{n+nb}{\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[LE,RO]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[LE]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}thepage} \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}itshape\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}  \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}thepage}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}geometry\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Configuración de márgenes}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headheight}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}50pt\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} 32.05278pt mínimo requerido + margen de seguridad}
+\PYG{k}{\PYGZbs{}geometry}\PYG{n+nb}{\PYGZob{}}top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,39 +1,6 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}xparse\PYG{n+nb}{\PYGZcb{}}        \PYG{c}{\PYGZpc{} Para comandos avanzados}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}geometry\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Configuración de márgenes}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}fancyhdr\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Encabezados/pies de página}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}titlesec\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Estilos de secciones}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Manejo de imágenes}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[spanish]}\PYG{n+nb}{\PYGZob{}}babel\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{} Localización}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}hyperref\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Hipervínculos}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}fontspec\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Fuentes modernas}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}datetime2\PYG{n+nb}{\PYGZcb{}}     \PYG{c}{\PYGZpc{} Manejo de fechas profesional}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}xcolor\PYG{n+nb}{\PYGZcb{}}        \PYG{c}{\PYGZpc{} Manejo de colores}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}etoolbox\PYG{n+nb}{\PYGZcb{}}      \PYG{c}{\PYGZpc{} Utilidades de macros}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}tabularx\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}float\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}booktabs\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}multirow\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}tocloft\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[tableposition=above]}\PYG{n+nb}{\PYGZob{}}caption\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[figure,table]}\PYG{n+nb}{\PYGZob{}}totalcount\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}xstring\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Add near the top of the file}
-\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}underscore\PYG{n+nb}{\PYGZcb{}}
-
-\PYG{c}{\PYGZpc{} Configuración de datetime2 para español}
-\PYG{k}{\PYGZbs{}DTMsetup}\PYG{n+nb}{\PYGZob{}}useregional=numeric\PYG{n+nb}{\PYGZcb{}}
-
-\PYG{k}{\PYGZbs{}graphicspath}\PYG{n+nb}{\PYGZob{}\PYGZob{}}figures/\PYG{n+nb}{\PYGZcb{}\PYGZob{}}figures/logo/\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-
-\PYG{c}{\PYGZpc{} ========================}
-\PYG{c}{\PYGZpc{} 5. Metadatos del Documento}
-\PYG{c}{\PYGZpc{} ========================}
 \PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Registro de metadatos}
 
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}NewDocumentCommand\PYGZob{}\PYGZbs{}title\PYGZcb{}\PYGZob{}m\PYGZcb{}\PYGZob{}\PYGZpc{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{}     \PYGZbs{}def\PYGZbs{}@title\PYGZob{}\PYGZsh{}1\PYGZcb{}\PYGZpc{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{}     \PYGZbs{}listadd\PYGZob{}\PYGZbs{}@metadata\PYGZcb{}\PYGZob{}Título: \PYGZsh{}1\PYGZcb{}\PYGZpc{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZcb{}}
 \PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}autor}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
     \PYG{k}{\PYGZbs{}def\PYGZbs{}@}autor\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
     \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Autor: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
@@ -78,45 +45,11 @@
     \PYG{k}{\PYGZbs{}listadd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}metadata\PYG{n+nb}{\PYGZcb{}\PYGZob{}}LOGO: \PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}  \PYGZpc{} Opcional: para mostrar en metadata}
 \PYG{n+nb}{\PYGZcb{}}
 
-\PYG{c}{\PYGZpc{} ========================}
-\PYG{c}{\PYGZpc{} 3. Diseño de Página}
-\PYG{c}{\PYGZpc{} ========================}
+
 \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}sectionmark}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
 
-\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headheight}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}50pt\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} 32.05278pt mínimo requerido + margen de seguridad}
-\PYG{k}{\PYGZbs{}geometry}\PYG{n+nb}{\PYGZob{}}top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm\PYG{n+nb}{\PYGZcb{}}
 
-\PYG{k}{\PYGZbs{}fancypagestyle}\PYG{n+nb}{\PYGZob{}}mainstyle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
-  \PYG{k}{\PYGZbs{}fancyhf}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2pt\PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}footrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.5pt\PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-    \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[height=2em]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par}
-      \PYG{k}{\PYGZbs{}href}\PYG{n+nb}{\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par\PYGZbs{}par}\PYG{n+nb}{\PYGZcb{}}
-    \PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[LE,RO]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nouppercase}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}rightmark}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[LE]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}thepage} \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-    \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}itshape\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-    \PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}  \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}thepage}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-\PYG{n+nb}{\PYGZcb{}}
 
-\PYG{k}{\PYGZbs{}fancypagestyle}\PYG{n+nb}{\PYGZob{}}tocstyle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
-  \PYG{k}{\PYGZbs{}fancyhf}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2pt\PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}footrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.5pt\PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-    \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[height=2em]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}logo\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}par}
-    \PYG{k}{\PYGZbs{}href}\PYG{n+nb}{\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}\PYGZob{}}www.rhyloo.com\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-    \PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[LE,RO]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[LE]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}thepage} \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-    \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RE,LO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} \PYG{k}{\PYGZbs{}ifdefvoid}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}@}projectcode\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}itshape\PYGZbs{}@}contact\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-    \PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[RO]}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}35\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}  \PYG{k}{\PYGZbs{}itshape\PYGZbs{}@}title \PYG{k}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}0.8cm\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}thepage}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-\PYG{n+nb}{\PYGZcb{}}
 
 \PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{} Redefinir marcas para ignorar subsecciones \PYGZhy{}\PYGZhy{}\PYGZhy{}}
 \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}sectionmark}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Actualiza solo \PYGZbs{}rightmark}
@@ -137,10 +70,7 @@
 \PYG{n+nb}{\PYGZcb{}}
 
 
-\PYG{c}{\PYGZpc{} ========================}
-\PYG{c}{\PYGZpc{} 4. Document Font}
-\PYG{c}{\PYGZpc{} ========================}
-\PYG{k}{\PYGZbs{}setmainfont}\PYG{n+nb}{\PYGZob{}}FreeSans\PYG{n+nb}{\PYGZcb{}}
+
 
 \PYG{c}{\PYGZpc{} ========================}
 \PYG{c}{\PYGZpc{} 4. Estilos de Títulos}
@@ -258,6 +188,9 @@
               \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1em\PYG{n+nb}{\PYGZcb{}}
               \PYG{k}{\PYGZbs{}iftotaltables}
               \PYG{k}{\PYGZbs{}listoftables}
+              \PYG{k}{\PYGZbs{}fi}
+              \PYG{k}{\PYGZbs{}iftotallistings}
+              \PYG{k}{\PYGZbs{}listoflistings}
               \PYG{k}{\PYGZbs{}fi}\PYG{n+nb}{\PYGZcb{}}
           \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
         \PYG{k}{\PYGZbs{}vfill}
@@ -272,6 +205,7 @@
 \PYG{k}{\PYGZbs{}AddToHook}\PYG{n+nb}{\PYGZob{}}cmd/section/before\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
   \PYG{k}{\PYGZbs{}clearpage}
 \PYG{n+nb}{\PYGZcb{}}
+
 \PYG{k}{\PYGZbs{}tocloftpagestyle}\PYG{n+nb}{\PYGZob{}}tocstyle\PYG{n+nb}{\PYGZcb{}}
 \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftbeforesecskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
 \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftsecleader}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}cftdotfill}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftdotsep}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
@@ -305,15 +239,7 @@
 \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cftsecpagefont}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}normalsize}\PYG{n+nb}{\PYGZcb{}}     \PYG{c}{\PYGZpc{} Normal font for section page numbers}
 
 
-\PYG{c}{\PYGZpc{} ========================}
-\PYG{c}{\PYGZpc{} 9. Configuración de Hipervínculos}
-\PYG{c}{\PYGZpc{} ========================}
-\PYG{k}{\PYGZbs{}hypersetup}\PYG{n+nb}{\PYGZob{}}
-    colorlinks = true,
-    linkcolor = blue!70!black,
-    urlcolor = blue!70!black,
-    citecolor = green!60!black
-\PYG{n+nb}{\PYGZcb{}}
+
 
 \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}parindent}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}}
 \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}50pt\PYG{n+nb}{\PYGZcb{}}
@@ -322,20 +248,16 @@
 
 \PYG{k}{\PYGZbs{}makeatletter}
 \PYG{k}{\PYGZbs{}apptocmd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}afterheading\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
-  \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}1.2\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}0.5\PYG{k}{\PYGZbs{}baselineskip}\PYG{n+nb}{\PYGZcb{}}
   \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}parskip}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}12pt\PYG{n+nb}{\PYGZcb{}}
   \PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
 \PYG{k}{\PYGZbs{}makeatother}
 
 \PYG{k}{\PYGZbs{}addto\PYGZbs{}captionsspanish}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
-  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}contentsname}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}centering} \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}hfill} \PYG{k}{\PYGZbs{}bfseries\PYGZbs{}normalsize} Contenido\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}contentsname}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Contenido\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
   \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}tablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Tabla\PYG{n+nb}{\PYGZcb{}}
 \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listfigurename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Lista de figuras\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listtablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Lista de tablas\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}renewcommand\PYGZob{}\PYGZbs{}lstlistlistingname\PYGZcb{}\PYGZob{}\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize Lista de códigos\PYGZbs{}hfill\PYGZcb{}}
-\PYG{n+nb}{\PYGZcb{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} TODO}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} Si no hay código eliminarlo y subir el feedback.}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}listtablename}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize} Lista de tablas\PYG{k}{\PYGZbs{}hfill}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+
 \end{Verbatim}
