@@ -1,5 +1,5 @@
-% Created 2025-06-02 Mon 16:41
-% Intended LaTeX compiler: pdflatex
+% Created 2025-06-02 Mon 22:29
+% Intended LaTeX compiler: xelatex
 \documentclass{reporti}
 \date{}
 \title{Reporti: TI-Inspired \LaTeX{} Template.}
@@ -9,49 +9,89 @@
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
- pdflang={English}}
+ pdflang={Spanish}}
 \begin{document}
 
 \subtitle{LaTeX Template}
 \author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
+\contact{\href{mailto :jorge2@uma.es}{Feedback about pthe documentation.}}
 \logo{rhyloo_solutions_horizontal.pdf}
 
 \type{README}
-\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
+\projectcode{REPORTI_DOC_TEMPLATE_v0.0}
 
 \summary{}
 
-\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
+\notes{Just copy it and modify under MIT.}
 
 \cover[width=1.35\textwidth][continue]
 
 
+
 \section{Motivation}
-\label{sec:orgf3970ef}
+\label{sec:org8f83e5b}
+At college I read lot of documents about electronics. One of my favorites was \emph{\href{https://e2echina.ti.com/cfs-file/\_\_key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf}{Op Amps for everyone}} from Texas Instruments (TI). If you take a moment to analyse the documents in the \texttt{TI\_Examples} folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So\ldots{} after a bit of time I have found free time to write a \LaTeX{} template. To be honest with you, I don't use \LaTeX{} in my company (and I am not sure that it is used on anyone), but maybe I or future generations will have to write lab reports or notes for some crazy school project. :D
 
-When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others\ldots{}). My favorite and inspiration/copy is Texas Instruments.
+So\ldots{} here is the first version of Reporti, a Texas Instruments inspired \LaTeX{} template for all you.
 
-I really enjoy reading the docs from them!
+\begin{center}
+\includegraphics[fbox,height=35em]{./README.pdf}
+\end{center}
 
-I would like to understand how their docs are made, which is the department that do them and why they are not using \LaTeX{}\ldots{} 
+\subsection{README notes}
+\label{sec:org83cd0db}
+I had the great idea of use the template for self documentation and I like to write in org-mode because my website run under it. So  I can leverage this file for my website.
+
+To sum-up this README file has the full package inside thanks to org-babel, it works like jupyter notebooks but for any language (\LaTeX{}, C, HTML and obviously python too).
+
+So sorry if it is a mesh on github, I recommend you read README.pdf
 
 \section{Features}
-\label{sec:orge395d43}
+\label{sec:orgd1156fe}
 \subsection{Cover page}
-\label{sec:org772a77b}
+\label{sec:orgce67a45}
 Just trying to keep it simple. A .cls file based on report class.
 
-About features, the cover can be customize with the next commands: Check
+About features, the cover can be customize with the next commands: Check \ref{lst:org3a9b3c1}
+\begin{listing}[htbp]
+\begin{minted}[]{latex}
+\documentclass[draft]{reporti}
+\cover[width=1.35\textwidth][continue]
+\type{Name of doc type}
+\code{Project Number/Code} % For more info. Look for naming conventions
+\titulo{Project title} 
+\autor{Author}
+\subtitulo{Subtitle}
+\resumen{Summary}
+\notes{Some notes in Cover}
+\contact{Contact footnote}
+\end{minted}
+\caption{\label{lst:org3a9b3c1}Control commands for the template}
+\end{listing}
 
 \subsection{Table}
-\label{sec:orgc43452f}
-
+\label{sec:orge84eb50}
+\begin{table}[htbp]
+\caption{Changelog}
+\centering
+\begin{tabular}{lll}
+\hline
+Version & Description & Author\\[0pt]
+\hline
+v0.0 & Initial release & Rhyloo\\[0pt]
+\hline
+\end{tabular}
+\end{table}
 \subsection{Images}
-\label{sec:orgd98f186}
-
+\label{sec:org4f26635}
+\begin{figure}[htbp]
+\centering
+\includegraphics[fbox,width=.9\linewidth]{./figures/logo/rhyloo_solutions_horizontal.pdf}
+\caption{Rhyloo Solutions's logo}
+\end{figure}
 
 \section{About images}
-\label{sec:orgc410ce6}
+\label{sec:org4c726b0}
 The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
 
 I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
@@ -72,18 +112,399 @@ Examples:
 
 IMO is the first part of a good story like "MarkII" or "Apollo"
 
-\section{Package}
-\label{sec:org1ad6683}
-\subsection{Basics on packages}
-\label{sec:org92dff32}
-\subsection{Class options}
-\label{sec:org2ca0c6a}
-\subsection{Packages}
-\label{sec:org22c8546}
-\subsection{Doument Commands}
-\label{sec:orgb361b17}
-\subsection{Config}
-\label{sec:orga5f192e}
-\end{document}
 
-LaTeX finished at Mon Jun  2 16:42:02
+\section{About document class}
+\label{sec:orga4d6a2d}
+
+\begin{minted}[]{latex}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{reporti}[Template LaTeX based on Texas Instruments note application documentation.]
+\LoadClass[10pt, a4paper, twoside]{article}
+\end{minted}
+
+\begin{minted}[]{latex}
+\DeclareOption{draft}{
+    \PassOptionsToPackage{draft}{graphicx}
+    \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{DRAFT}}
+}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\ProcessOptions\relax
+\end{minted}
+
+\subsection{Packages}
+\label{sec:org53fc2c3}
+I added package geometry becuase I need to config headheight, and page geometry:
+\begin{minted}[]{latex}
+\RequirePackage{geometry}      % Configuración de márgenes
+\setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
+\geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
+\end{minted}
+Encabezados/pies de página. I defined two styles.
+\begin{enumerate}
+\item mainstyle: Used for full document elaboration
+\item tocstyle: Used by tocs.
+\end{enumerate}
+\begin{minted}[]{latex}
+\RequirePackage{fancyhdr}      
+\fancypagestyle{mainstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
+    }
+  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+    }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{tocstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}}
+  }
+  \fancyhead[LE,RO]{}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+  }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\end{minted}
+
+\begin{minted}[]{latex}
+\RequirePackage{xparse}        % Para comandos avanzados
+\end{minted}
+
+\begin{minted}[]{latex}
+\RequirePackage{titlesec}      % Estilos de secciones
+\RequirePackage{graphicx}      % Manejo de imágenes
+\RequirePackage[spanish]{babel}% Localización
+
+\RequirePackage{hyperref}      % Hipervínculos
+\hypersetup{
+    colorlinks = true,
+    linkcolor = blue!70!black,
+    urlcolor = blue!70!black,
+    citecolor = green!60!black
+}
+
+
+\RequirePackage{fontspec}      % Fuentes modernas
+\setmainfont{FreeSans}
+
+
+\RequirePackage[export]{adjustbox}
+\RequirePackage{datetime2}     % Manejo de fechas profesional
+\RequirePackage{xcolor}        % Manejo de colores
+\RequirePackage{etoolbox}      % Utilidades de macros
+\RequirePackage{tabularx}
+\RequirePackage{float}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage[titles]{tocloft}
+\RequirePackage[tableposition=above]{caption}
+\RequirePackage[figure,table]{totalcount}
+\RequirePackage{xstring} % Add near the top of the file
+\RequirePackage{underscore}
+\RequirePackage{longtable}
+\RequirePackage{wrapfig}
+\RequirePackage{rotating}
+\RequirePackage[normalem]{ulem}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{capt-of}
+
+\RequirePackage[newfloat,outputdir=./build]{minted}
+\usemintedstyle{emacs}
+\newlistof{listing}{lol}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+\RequirePackage{caption}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{%
+  name={Code},
+  fileext=lol}
+\renewcommand{\cftlistingpresnum}{Code~}
+\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
+\setlength{\cftlistingnumwidth}{5em}
+
+
+% Configuración de datetime2 para español
+\DTMsetup{useregional=numeric}
+
+\graphicspath{{figures/}{figures/logo/}}
+\end{minted}
+
+\subsection{Doument Commands}
+\label{sec:org2496c28}
+\begin{minted}[]{latex}
+\newcommand{\@metadata}{} % Registro de metadatos
+
+\NewDocumentCommand{\autor}{m}{%
+    \def\@autor{#1}%
+    \listadd{\@metadata}{Autor: #1}%
+}
+\NewDocumentCommand{\fecha}{O{\DTMtoday}}{%
+    \def\@fecha{#1}%
+    \listadd{\@metadata}{Fecha: #1}%
+}
+\NewDocumentCommand{\summary}{m}{%
+    \def\@summary{#1}%
+    \ifx\@summary\@empty\else
+        \gappto\@afterabstract{\@printsummary}%
+    \fi
+}
+\NewDocumentCommand{\subtitle}{m}{%
+    \def\@subtitle{#1}%
+    \listadd{\@metadata}{Subtítulo: #1}%  % Opcional: para mostrar en metadata
+}
+\NewDocumentCommand{\type}{m}{%
+    \def\@type{#1}%
+    \listadd{\@metadata}{Type: #1}%  % Opcional: para mostrar en metadata
+}
+
+\NewDocumentCommand{\projectcode}{m}{%
+    \def\@projectcode{#1}%
+    \listadd{\@metadata}{Projectcode: #1}%  % Opcional: para mostrar en metadata
+}
+\NewDocumentCommand{\notes}{m}{%
+    \def\@notes{#1}%
+    \listadd{\@metadata}{Notes: #1}%  % Opcional: para mostrar en metadata
+}
+\NewDocumentCommand{\contact}{m}{%
+    \def\@contact{#1}%
+    \listadd{\@metadata}{Contact: #1}%  % Opcional: para mostrar en metadata
+}
+\NewDocumentCommand{\toc}{m}{%
+    \def\@toc{#1}%
+    \listadd{\@metadata}{TOC: #1}%  % Opcional: para mostrar en metadata
+}
+\NewDocumentCommand{\logo}{m}{%
+    \def\@logo{#1}%
+    \listadd{\@metadata}{LOGO: #1}%  % Opcional: para mostrar en metadata
+}
+
+
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+
+
+
+% --- Redefinir marcas para ignorar subsecciones ---
+\renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
+\renewcommand{\subsectionmark}[1]{} % Subsecciones no modifican los headers
+
+
+\pagestyle{mainstyle}
+
+
+\fancypagestyle{titlepagestyle}{
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \fancyhf{}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{
+  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}}
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \normalfont\thepage}}
+}
+
+
+
+
+% ========================
+% 4. Estilos de Títulos
+% ========================
+\setlength{\voffset}{10pt} % Ajusta según necesidad para evitar warnings
+\setlength{\headsep}{5pt} % Ajusta según necesidad para evitar warnings
+
+% Definir formato de títulos
+\titleformat{\section}
+  {\large\bfseries} % Formato del texto
+  {\thesection.\hspace{2em}}   % Etiqueta: Número + 4em de espacio
+  {0pt}                        % Separación entre etiqueta y título
+  {}                           % Código antes del título
+
+\titleformat{\subsection}
+  {\large\itshape\bfseries}
+  {\thesubsection.\hspace{1.25em}} % 3em de espacio
+  {0pt}
+  {}
+
+\titleformat{\subsubsection}
+  {\bfseries}
+  {\hspace{3.5em}} % 2em de espacio
+  {0pt}
+  {}
+
+% Ajustar espaciado vertical (opcional)
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\subsection}{0pt}{12pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{12pt}{6pt}
+
+
+
+\newlength{\originalparskip}
+% ========================
+% 6. Cover
+% ========================
+\NewDocumentCommand{\cover}{O{width=0.8\textwidth} O{}}{%
+  \begingroup % Grupo local para cambios de espaciado
+  % Save the original parskip value
+  \setlength{\originalparskip}{\parskip}
+  \renewcommand{\baselinestretch}{0.4} % Ajuste principal (20% más de espacio)
+  \renewcommand{\parskip}{\originalparskip} % Ajuste principal (20% más de espacio)
+  \begin{titlepage}
+  \thispagestyle{titlepagestyle} % <--- Aplica el footer
+    % --------------------------
+    % Cabecera con logo y datos institucionales
+  % --------------------------
+  \ifdefvoid{\@logo}
+            {\vspace*{4em}}{}
+  \noindent\begin{minipage}[t]{0.4\textwidth}
+  \ifdefvoid{\@logo}
+            {}
+            {\includegraphics[#1]{\@logo}}
+    %% \vspace{-1.5\baselineskip} % Alineación precisa
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.6\textwidth}
+      \vspace{-2\baselineskip} % Alineación precisa
+      \raggedleft
+      \ifdef{\@type}{\fontsize{14}{35}\selectfont\itshape\@type}{}\par
+      \ifdef{\@projectcode}{\fontsize{9}{35}\selectfont\itshape\@projectcode}{}
+
+    \end{minipage}
+    
+    \vspace{0.5\baselineskip} % Alineación precisa
+
+    \begin{flushright}
+      {\fontsize{18}{35}\selectfont\bfseries\itshape\@title}
+    \end{flushright}
+    \vspace*{-1\baselineskip} % Reduce espacio posterior
+        {\rule{\textwidth}{2pt}}
+
+        \noindent\begin{minipage}{0.7\textwidth}
+        \raggedright
+        \ifdef{\@author}{%
+          {\fontsize{10}{35}\selectfont\itshape\@author}
+        }{}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.25\textwidth}
+        \raggedleft
+        \ifdef{\@subtitle}{%
+          {\fontsize{10}{35}\selectfont\itshape\@subtitle}
+        }{}
+        \end{minipage}
+
+        % --------------------------
+        % Summary condicional
+        % --------------------------
+        \ifdefvoid{\@summary}{}{%
+          \vspace{0.75cm}
+
+          \hspace{1.75cm}
+          \begin{minipage}{13.6cm}
+            \begin{center}
+              \noindent{\bfseries ABSTRACT}
+              \end{center}
+            {\fontsize{10}{35}\selectfont\@summary}\par
+            {\rule{\textwidth}{1pt}}
+          \end{minipage}
+        }
+        \ifstrequal{#2}{continue}{
+          \tocloftpagestyle{titlepagestyle}
+          \vspace{0.75cm}
+
+          \hspace{1.75cm}
+          \begin{minipage}{13.6cm}
+            {\fontsize{9}{35}\selectfont
+              \tableofcontents
+              \vspace{1em}
+              \iftotalfigures
+              \listoffigures
+              \fi
+              \vspace{1em}
+              \iftotaltables
+              \listoftables
+              \fi
+              \iftotallistings
+              \listoflistings
+              \fi}
+          \end{minipage}}{}
+        \vfill
+        \ifdefvoid{\@notes}{}{%
+          \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
+  \end{titlepage}
+  \endgroup
+  \clearpage
+  \pagestyle{mainstyle}
+}
+
+\AddToHook{cmd/section/before}{%
+  \clearpage
+}
+
+\tocloftpagestyle{tocstyle}
+\setlength{\cftbeforesecskip}{0pt}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftdotsep}{1}% Default is 4.5
+
+\renewcommand{\cftaftertoctitleskip}{2em}
+\renewcommand{\cftafterloftitleskip}{2em}
+\renewcommand{\cftafterlottitleskip}{2em}
+
+\renewcommand{\cftfigindent}{0pt}
+\renewcommand{\cftfigpresnum}{\figurename~}
+\renewcommand{\cftfigaftersnum}{.}
+\setlength{\cftfignumwidth}{5em}
+\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
+\renewcommand{\cftsecpagefont}{\normalsize}
+
+
+% =============================================
+% List of Tables Customization
+% =============================================
+% 1. Set table numbering format: section-table (e.g., 1-1)
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
+
+% 2. Configure table entries in List of Tables
+\renewcommand{\cfttabindent}{0pt}               % Remove indentation
+\renewcommand{\cfttabpresnum}{\tablename~}      % Prefix: "Table "
+\renewcommand{\cfttabaftersnum}{.}              % Suffix: "."
+\setlength{\cfttabnumwidth}{5em}                % Width for table numbers
+
+% 3. (Optional) Set section page numbers in TOC
+\renewcommand{\cftsecpagefont}{\normalsize}     % Normal font for section page numbers
+
+
+
+
+\setlength{\parindent}{0pt}
+\setlength{\baselineskip}{50pt}
+\renewcommand{\baselinestretch}{1.2} % Ajuste principal (20% más de espacio)
+
+
+\makeatletter
+\apptocmd{\@afterheading}{
+  \vspace{-0.5\baselineskip}
+  \setlength{\parskip}{12pt}
+  }{}{}
+\makeatother
+
+\addto\captionsspanish{%
+  \renewcommand{\contentsname}{\hfill\bfseries\normalsize Contenido\hfill}
+  \renewcommand{\tablename}{Tabla}
+\renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
+
+
+\end{minted}
+\end{document}

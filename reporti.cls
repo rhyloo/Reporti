@@ -16,22 +16,17 @@
 \RequirePackage{fancyhdr}      
 \fancypagestyle{mainstyle}{
   \fancyhf{}
-  
   \renewcommand{\headrulewidth}{2pt}
   \renewcommand{\footrulewidth}{1.5pt}
-  
-  \ifdefvoid{\@logo}{}{
+  \ifdefvoid{\@logo}{}{%
     \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
       \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
-  }
-  
+    }
   \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont\thepage\hspace{0.8cm}\itshape\@title}}
-  \ifdefvoid{\@contact}{
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont
-        \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
     \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-  }
+    }
   \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
 }
 
@@ -53,9 +48,10 @@
 
 \RequirePackage{xparse}        % Para comandos avanzados
 
+\RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
-\RequirePackage[spanish]{babel}% Localización
+\RequirePackage[english]{babel}% Localización
 
 \RequirePackage{hyperref}      % Hipervínculos
 \hypersetup{
@@ -70,9 +66,9 @@
 \setmainfont{FreeSans}
 
 
-
+\RequirePackage[export]{adjustbox}
 \RequirePackage{datetime2}     % Manejo de fechas profesional
-\RequirePackage{xcolor}        % Manejo de colores
+
 \RequirePackage{etoolbox}      % Utilidades de macros
 \RequirePackage{tabularx}
 \RequirePackage{float}
@@ -91,9 +87,11 @@
 \RequirePackage{amssymb}
 \RequirePackage{capt-of}
 
+
+
 \RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
-\newlistof{listing}{lol}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+\newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
 \RequirePackage{caption}
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{%
@@ -103,7 +101,7 @@
 \renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
 \setlength{\cftlistingnumwidth}{5em}
 
-
+\RequirePackage[most]{tcolorbox}
 % Configuración de datetime2 para español
 \DTMsetup{useregional=numeric}
 
@@ -368,3 +366,9 @@
   \renewcommand{\tablename}{Tabla}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
+
+\addto\captionsenglish{%
+  \renewcommand{\contentsname}{\hfill\bfseries\normalsize Content\hfill}
+  \renewcommand{\tablename}{Table}
+\renewcommand{\listfigurename}{\hfill\bfseries\normalsize List of figures\hfill}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}}

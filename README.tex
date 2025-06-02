@@ -1,4 +1,4 @@
-% Created 2025-06-02 Mon 17:55
+% Created 2025-06-02 Mon 23:43
 % Intended LaTeX compiler: xelatex
 \documentclass{reporti}
 \date{}
@@ -9,42 +9,56 @@
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
- pdflang={Spanish}}
+ pdflang={English}}
 \begin{document}
 
 \subtitle{LaTeX Template}
 \author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
+\contact{\href{mailto :jorge2@uma.es}{Feedback about the documentation.}}
 \logo{rhyloo_solutions_horizontal.pdf}
 
 \type{README}
-\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
+\projectcode{REPORTI_DOC_TEMPLATE_v0.0}
 
 \summary{}
 
-\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
+\notes{Just copy it and modify under MIT.}
 
 \cover[width=1.35\textwidth][continue]
 
 
+
 \section{Motivation}
-\label{sec:org799a10b}
+\label{sec:org3e5338d}
+At college I read lot of documents about electronics. One of my favorites was \emph{\href{https://e2echina.ti.com/cfs-file/\_\_key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf}{Op Amps for everyone}} from Texas Instruments (TI). If you take a moment to analyse the documents in the \texttt{TI\_Examples} folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a \LaTeX{} template. To be honest with you, I don't use \LaTeX{} in my company, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write lab reports or notes for some crazy school project. :D
 
-When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others\ldots{}). My favorite and inspiration/copy is Texas Instruments.
+So, here is the first version of Reporti, a Texas Instruments-inspired \LaTeX{} template for you all.
 
-I really enjoy reading the docs from them!
+\begin{center}
+\includegraphics[fbox,height=35em]{./README.pdf}
+\end{center}
 
-I would like to understand how their docs are made, which is the department that do them and why they are not using \LaTeX{}\ldots{} 
+\begin{tcolorbox}[colback=yellow!5!white,colframe=red,title=Warning, fonttitle=\Large\bfseries,
+  fontupper=\noindent,boxsep=2pt,enhanced,left=10pt,top=5pt, bottom=5pt,right=10pt]
+  
+I had the great idea of use the template for self documentation and I like to write in org-mode because my website run under it. So I can leverage this file for my website.
+
+To sum‐up this README file has the full package inside thanks to org-babel, it works like jupyter notebooks but for any language (LaTeX, C, HTML and obviously python too).
+
+So sorry if it is a mesh on github, I recommend you read README.pdf
+\end{tcolorbox}
 
 \section{Features}
-\label{sec:orgc1f6da2}
-
+\label{sec:org4912e33}
 \subsection{Cover page}
-\label{sec:orga1c6089}
+\label{sec:org870aedb}
 Just trying to keep it simple. A .cls file based on report class.
 
-About features, the cover can be customize with the next commands: Check \ref{lst:org11c591e}
+About features, the cover can be customize with the next commands: Check \ref{lst:org99221c1}
 \begin{listing}[htbp]
 \begin{minted}[]{latex}
+\documentclass[draft]{reporti}
+\cover[width=1.35\textwidth][continue]
 \type{Name of doc type}
 \code{Project Number/Code} % For more info. Look for naming conventions
 \titulo{Project title} 
@@ -54,21 +68,32 @@ About features, the cover can be customize with the next commands: Check \ref{ls
 \notes{Some notes in Cover}
 \contact{Contact footnote}
 \end{minted}
-\caption{\label{lst:org11c591e}test\_code}
+\caption{\label{lst:org99221c1}Control commands for the template}
 \end{listing}
 
 \subsection{Table}
-\label{sec:orgb8297b7}
+\label{sec:orgc32cd2c}
+\begin{table}[htbp]
+\caption{Changelog}
+\centering
+\begin{tabular}{lll}
+\hline
+Version & Description & Author\\[0pt]
+\hline
+v0.0 & Initial release & Rhyloo\\[0pt]
+\hline
+\end{tabular}
+\end{table}
 \subsection{Images}
-\label{sec:orgabbc4ba}
+\label{sec:orgdc444ff}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.9\linewidth]{./figures/logo/rhyloo_solutions_horizontal.pdf}
-\caption{\label{fig:org35eccb4}testt}
+\includegraphics[fbox,width=.9\linewidth]{./figures/logo/rhyloo_solutions_horizontal.pdf}
+\caption{Rhyloo Solutions's logo}
 \end{figure}
 
 \section{About images}
-\label{sec:orgb7763a0}
+\label{sec:org3ca4873}
 The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
 
 I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
@@ -91,7 +116,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 
 
 \section{About document class}
-\label{sec:orgc23859a}
+\label{sec:org4f0094e}
 
 \begin{minted}[]{latex}
 \NeedsTeXFormat{LaTeX2e}
@@ -109,7 +134,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \end{minted}
 
 \subsection{Packages}
-\label{sec:org4ef783f}
+\label{sec:orga9d0014}
 I added package geometry becuase I need to config headheight, and page geometry:
 \begin{minted}[]{latex}
 \RequirePackage{geometry}      % Configuración de márgenes
@@ -125,22 +150,17 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{fancyhdr}      
 \fancypagestyle{mainstyle}{
   \fancyhf{}
-  
   \renewcommand{\headrulewidth}{2pt}
   \renewcommand{\footrulewidth}{1.5pt}
-  
-  \ifdefvoid{\@logo}{}{
+  \ifdefvoid{\@logo}{}{%
     \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
       \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
-  }
-  
+    }
   \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont\thepage\hspace{0.8cm}\itshape\@title}}
-  \ifdefvoid{\@contact}{
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont
-        \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
     \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-  }
+    }
   \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
 }
 
@@ -167,9 +187,11 @@ Encabezados/pies de página. I defined two styles.
 \end{minted}
 
 \begin{minted}[]{latex}
+
+\RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
-\RequirePackage[spanish]{babel}% Localización
+\RequirePackage[english]{babel}% Localización
 
 \RequirePackage{hyperref}      % Hipervínculos
 \hypersetup{
@@ -184,9 +206,9 @@ Encabezados/pies de página. I defined two styles.
 \setmainfont{FreeSans}
 
 
-
+\RequirePackage[export]{adjustbox}
 \RequirePackage{datetime2}     % Manejo de fechas profesional
-\RequirePackage{xcolor}        % Manejo de colores
+
 \RequirePackage{etoolbox}      % Utilidades de macros
 \RequirePackage{tabularx}
 \RequirePackage{float}
@@ -205,9 +227,11 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{amssymb}
 \RequirePackage{capt-of}
 
+
+
 \RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
-\newlistof{listing}{lol}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+\newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
 \RequirePackage{caption}
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{%
@@ -217,7 +241,7 @@ Encabezados/pies de página. I defined two styles.
 \renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
 \setlength{\cftlistingnumwidth}{5em}
 
-
+\RequirePackage[most]{tcolorbox}
 % Configuración de datetime2 para español
 \DTMsetup{useregional=numeric}
 
@@ -225,7 +249,7 @@ Encabezados/pies de página. I defined two styles.
 \end{minted}
 
 \subsection{Doument Commands}
-\label{sec:orgc1cacc4}
+\label{sec:orgc60062b}
 \begin{minted}[]{latex}
 \newcommand{\@metadata}{} % Registro de metadatos
 
@@ -486,6 +510,12 @@ Encabezados/pies de página. I defined two styles.
   \renewcommand{\tablename}{Tabla}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
+
+\addto\captionsenglish{%
+  \renewcommand{\contentsname}{\hfill\bfseries\normalsize Content\hfill}
+  \renewcommand{\tablename}{Table}
+\renewcommand{\listfigurename}{\hfill\bfseries\normalsize List of figures\hfill}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}}
 
 
 \end{minted}

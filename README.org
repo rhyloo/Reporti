@@ -1,42 +1,56 @@
 #+title: Reporti: TI-Inspired LaTeX Template.
 #+latex_class_options: 
 #+latex_class: reporti
-#+options: toc:nil author:nil date:nil title:nil ::nil prop:nil ^:nil
-#+language: es
-#+PROPERTY: header-args :results silent :tangle ./reporti.cls
+#+options: toc:nil author:nil date:nil title:nil ::t prop:nil ^:t
+#+language: en
+#+PROPERTY: header-args :results silent :tangle ./reporti.cls 
 
 #+LATEX:\subtitle{LaTeX Template}
 #+LATEX:\author{Rhyloo - \href{mailto:jorge2@uma.es}{jorge2@uma.es}}
-#+LATEX:\contact{\href{mailto:jorge2@uma.es}{Feedback about the documentation.}}
+#+LATEX:\contact{\href{mailto :jorge2@uma.es}{Feedback about the documentation.}}
 #+LATEX:\logo{rhyloo_solutions_horizontal.pdf}
 
 #+LATEX:\type{README}
-#+LATEX:\projectcode{REPORTI_DOC_TEMPLATE_V0.0}
+#+LATEX:\projectcode{REPORTI_DOC_TEMPLATE_v0.0}
 
 #+LATEX:\summary{}
 
-#+LATEX:\notes{PurePath Digital, Equibit are trademarks of Texas Instruments.\\ Excel is a trademark of Microsoft Corporation.}
+#+LATEX:\notes{Just copy it and modify under MIT.}
 
 #+LATEX:\cover[width=1.35\textwidth][continue]
 
 
+
 * Motivation
+At college I read lot of documents about electronics. One of my favorites was /[[https://e2echina.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf][Op Amps for everyone]]/ from Texas Instruments (TI). If you take a moment to analyse the documents in the ~TI_Examples~ folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a LaTeX template. To be honest with you, I don't use LaTeX in my company, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write lab reports or notes for some crazy school project. :D
 
-When I was at college I had to read a lot of datasheets and documentation from different manufacturers of electronics (i. e. Texas Instruments, Analog Devices, Microchip and others...). My favorite and inspiration/copy is Texas Instruments.
+So, here is the first version of Reporti, a Texas Instruments-inspired LaTeX template for you all.
 
-I really enjoy reading the docs from them!
+#+ATTR_LATEX: :height 35em :options fbox
+[[./README.pdf]]
 
-I would like to understand how their docs are made, which is the department that do them and why they are not using LaTeX... 
+#+begin_export latex
+\begin{tcolorbox}[colback=yellow!5!white,colframe=red,title=Warning, fonttitle=\Large\bfseries,
+  fontupper=\noindent,boxsep=2pt,enhanced,left=10pt,top=5pt, bottom=5pt,right=10pt]
+  
+I had the great idea of use the template for self documentation and I like to write in org-mode because my website run under it. So I can leverage this file for my website.
+
+To sum‐up this README file has the full package inside thanks to org-babel, it works like jupyter notebooks but for any language (LaTeX, C, HTML and obviously python too).
+
+So sorry if it is a mesh on github, I recommend you read README.pdf
+\end{tcolorbox}
+#+end_export
 
 * Features
-
 ** Cover page
 Just trying to keep it simple. A .cls file based on report class.
 
 About features, the cover can be customize with the next commands: Check [[test_code]]
 #+Name:test_code
-#+CAPTION: test_code
+#+CAPTION: Control commands for the template
 #+begin_src latex :tangle no
+\documentclass[draft]{reporti}
+\cover[width=1.35\textwidth][continue]
 \type{Name of doc type}
 \code{Project Number/Code} % For more info. Look for naming conventions
 \titulo{Project title} 
@@ -48,9 +62,15 @@ About features, the cover can be customize with the next commands: Check [[test_
 #+end_src
 
 ** Table
+#+Caption: Changelog
+|---------+-----------------+--------|
+| Version | Description     | Author |
+|---------+-----------------+--------|
+| v0.0    | Initial release | Rhyloo |
+|---------+-----------------+--------|
 ** Images
-#+Name: test
-#+Caption: testt
+#+ATTR_LATEX: :options fbox
+#+Caption: Rhyloo Solutions's logo
 [[./figures/logo/rhyloo_solutions_horizontal.pdf]]
 
 * About images
@@ -102,22 +122,17 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{fancyhdr}      
 \fancypagestyle{mainstyle}{
   \fancyhf{}
-  
   \renewcommand{\headrulewidth}{2pt}
   \renewcommand{\footrulewidth}{1.5pt}
-  
-  \ifdefvoid{\@logo}{}{
+  \ifdefvoid{\@logo}{}{%
     \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
       \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
-  }
-  
+    }
   \fancyhead[LE,RO]{\nouppercase{\rightmark}}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont\thepage\hspace{0.8cm}\itshape\@title}}
-  \ifdefvoid{\@contact}{
-    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont
-        \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
     \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
-  }
+    }
   \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
 }
 
@@ -144,9 +159,11 @@ Encabezados/pies de página. I defined two styles.
 #+end_src
 
 #+begin_src latex
+
+\RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
-\RequirePackage[spanish]{babel}% Localización
+\RequirePackage[english]{babel}% Localización
 
 \RequirePackage{hyperref}      % Hipervínculos
 \hypersetup{
@@ -161,9 +178,9 @@ Encabezados/pies de página. I defined two styles.
 \setmainfont{FreeSans}
 
 
-
+\RequirePackage[export]{adjustbox}
 \RequirePackage{datetime2}     % Manejo de fechas profesional
-\RequirePackage{xcolor}        % Manejo de colores
+
 \RequirePackage{etoolbox}      % Utilidades de macros
 \RequirePackage{tabularx}
 \RequirePackage{float}
@@ -182,9 +199,11 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{amssymb}
 \RequirePackage{capt-of}
 
+
+
 \RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
-\newlistof{listing}{lol}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+\newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
 \RequirePackage{caption}
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{%
@@ -194,7 +213,7 @@ Encabezados/pies de página. I defined two styles.
 \renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
 \setlength{\cftlistingnumwidth}{5em}
 
-
+\RequirePackage[most]{tcolorbox}
 % Configuración de datetime2 para español
 \DTMsetup{useregional=numeric}
 
@@ -463,38 +482,14 @@ Encabezados/pies de página. I defined two styles.
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
 \renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
 
+\addto\captionsenglish{%
+  \renewcommand{\contentsname}{\hfill\bfseries\normalsize Content\hfill}
+  \renewcommand{\tablename}{Table}
+\renewcommand{\listfigurename}{\hfill\bfseries\normalsize List of figures\hfill}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}}
+
 
 #+end_src
-
-* Export Configuration                                 :noexport:
-#+begin_src emacs-lisp :tangle no
-;; Prefer minted for source code export in LaTeX.
-(setq org-latex-listings (quote minted))
-
-;; Prefex `xelatex' as the LaTeX processor.
-(setq org-latex-compiler "xelatex")
-
-;; Make sure that LaTeX knows about the `minted' package: we take care
-;; of it in `org-latex-packages-alist' and we do *NOT* want to include
-;; it explicitly as a #+LATEX_HEADER, since the options may differ, in
-;; which case the two inclusions will conflict.
-(setq org-latex-packages-alist '(("outputdir=./build" "minted" nil)))
-
-;; `org-latex-pdf-process' is a list of shell commands. We take advantage of that
-;; to:
-;;   - create the `build' subdirectory if it is not present
-;;   - run `latexmk' with the proper options (in particular `-shell-escape' which i
-;;     necessary in order to allow the LaTeX processor to run an external program,
-;;     like `pygmentize' in the case of `minted'; and `-output-directory' to allow
-;;     all the artifacts to be sent there)
-;;   - finally, move the `.pdf' file to the parent directory of the `build' subdirectory
-;;     so that the exporter will be able to find it and not complain.
-;; Note also that `%latex' is replaced by the value of `org-latex-compiler' so we use
-;; `xelatex' as our LaTeX processor.
-(setq org-latex-pdf-process '("mkdir -p build"
-                              "latexmk -f -pdf -%latex -shell-escape -interaction=nonstopmode -output-directory=%o/build %f"
-                              "mv %o/build/%b.pdf %O"))
-  #+end_src
 * COMMENT Local variables
 Local Variables:
 eval: (add-hook 'after-save-hook
