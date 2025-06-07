@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.5.18)  2 JUN 2025 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.5.18)  7 JUN 2025 22:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -294,7 +294,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 62.
+Package hyperref Info: Option `colorlinks' set `true' on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
@@ -539,11 +539,12 @@ Package caption Info: hyperref package is loaded.
 Package: totalcount 2018/01/21 v1.0a Total values of counters (AR)
 \c@totalcount@figure=\count305
 \c@totalcount@table=\count306
+\c@totalcount@listing=\count307
 )
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count307
-\xs_countb=\count308
+\xs_counta=\count308
+\xs_countb=\count309
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
@@ -561,23 +562,23 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTright=\skip98
 \LTpre=\skip99
 \LTpost=\skip100
-\LTchunksize=\count309
+\LTchunksize=\count310
 \LTcapwidth=\dimen263
 \LT@head=\box60
 \LT@firsthead=\box61
 \LT@foot=\box62
 \LT@lastfoot=\box63
 \LT@gbox=\box64
-\LT@cols=\count310
-\LT@rows=\count311
-\c@LT@tables=\count312
-\c@LT@chunks=\count313
+\LT@cols=\count311
+\LT@rows=\count312
+\c@LT@tables=\count313
+\c@LT@chunks=\count314
 \LT@p@ftn=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen264
 \WF@size=\dimen265
-\c@WF@wrappedlines=\count314
+\c@WF@wrappedlines=\count315
 \WF@box=\box65
 \WF@everypar=\toks27
 Package: wrapfig 2003/01/31  v 3.6
@@ -588,7 +589,7 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count315
+\c@r@tfl@t=\count316
 \rotFPtop=\skip101
 \rotFPbot=\skip102
 \rot@float@box=\box66
@@ -600,7 +601,7 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \UL@skip=\skip103
 \UL@hook=\toks29
 \UL@height=\dimen266
-\UL@pe=\count316
+\UL@pe=\count317
 \UL@pixel=\dimen267
 \ULC@box=\box69
 Package: ulem 2019/11/18
@@ -626,14 +627,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count317
+\inf@bad=\count318
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count318
-\leftroot@=\count319
+\uproot@=\count319
+\leftroot@=\count320
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count320
-\DOTSCASE@=\count321
+\classnum@=\count321
+\DOTSCASE@=\count322
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -646,20 +647,20 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen271
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count322
+\macc@depth=\count323
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count323
+\c@MaxMatrixCols=\count324
 \dotsspace@=\muskip17
-\c@parentequation=\count324
-\dspbrk@lvl=\count325
+\c@parentequation=\count325
+\dspbrk@lvl=\count326
 \tag@help=\toks31
-\row@=\count326
-\column@=\count327
-\maxfields@=\count328
+\row@=\count327
+\column@=\count328
+\maxfields@=\count329
 \andhelp@=\toks32
 \eqnshift@=\dimen272
 \alignsep@=\dimen273
@@ -697,11 +698,11 @@ b
 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count329
+\FV@CodeLineNo=\count330
 \FV@InFile=\read3
 \FV@TabBox=\box72
-\c@FancyVerbLine=\count330
-\FV@StepNumber=\count331
+\c@FancyVerbLine=\count331
+\FV@StepNumber=\count332
 \FV@OutFile=\write3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -714,50 +715,50 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
 Invalid UTF-8 byte or sequence at line 292 replaced by U+FFFD.
-\linenopenalty=\count332
+\linenopenalty=\count333
 \output=\toks35
-\linenoprevgraf=\count333
+\linenoprevgraf=\count334
 \linenumbersep=\dimen278
 \linenumberwidth=\dimen279
-\c@linenumber=\count334
-\c@pagewiselinenumber=\count335
-\c@LN@truepage=\count336
-\c@internallinenumber=\count337
-\c@internallinenumbers=\count338
+\c@linenumber=\count335
+\c@pagewiselinenumber=\count336
+\c@LN@truepage=\count337
+\c@internallinenumber=\count338
+\c@internallinenumbers=\count339
 \quotelinenumbersep=\dimen280
 \bframerule=\dimen281
 \bframesep=\dimen282
 \bframebox=\box73
-\linenoamsmath@ams@eqpen=\count339
+\linenoamsmath@ams@eqpen=\count340
 LaTeX Info: Redefining \\ on input line 3180.
 )
-\c@FancyVerbWriteLine=\count340
-\c@FancyVerbBufferIndex=\count341
-\c@FancyVerbBufferLength=\count342
-\c@FancyVerbBufferLine=\count343
-\c@FV@oldbufferlength=\count344
-\c@FV@TrueTabGroupLevel=\count345
-\c@FV@TrueTabCounter=\count346
+\c@FancyVerbWriteLine=\count341
+\c@FancyVerbBufferIndex=\count342
+\c@FancyVerbBufferLength=\count343
+\c@FancyVerbBufferLine=\count344
+\c@FV@oldbufferlength=\count345
+\c@FV@TrueTabGroupLevel=\count346
+\c@FV@TrueTabCounter=\count347
 \FV@TabBox@Group=\box74
 \FV@TmpLength=\skip107
-\c@FV@HighlightLinesStart=\count347
-\c@FV@HighlightLinesStop=\count348
-\FV@LoopCount=\count349
+\c@FV@HighlightLinesStart=\count348
+\c@FV@HighlightLinesStop=\count349
+\FV@LoopCount=\count350
 \FV@NCharsBox=\box75
 \FV@BreakIndent=\dimen283
-\FV@BreakIndentNChars=\count350
+\FV@BreakIndentNChars=\count351
 \FV@BreakSymbolSepLeft=\dimen284
-\FV@BreakSymbolSepLeftNChars=\count351
+\FV@BreakSymbolSepLeftNChars=\count352
 \FV@BreakSymbolSepRight=\dimen285
-\FV@BreakSymbolSepRightNChars=\count352
+\FV@BreakSymbolSepRightNChars=\count353
 \FV@BreakSymbolIndentLeft=\dimen286
-\FV@BreakSymbolIndentLeftNChars=\count353
+\FV@BreakSymbolIndentLeftNChars=\count354
 \FV@BreakSymbolIndentRight=\dimen287
-\FV@BreakSymbolIndentRightNChars=\count354
-\c@FancyVerbLineBreakLast=\count355
+\FV@BreakSymbolIndentRightNChars=\count355
+\c@FancyVerbLineBreakLast=\count356
 \FV@LineBox=\box76
 \FV@LineIndentBox=\box77
-\c@FV@BreakBufferDepth=\count356
+\c@FV@BreakBufferDepth=\count357
 \FV@LineWidth=\dimen288
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
@@ -808,49 +809,17 @@ Package newfloat Info: `wrapfig' package detected.
 \minted@appexistsfile=\read4
 \minted@bgbox=\box78
 \minted@code=\write4
-\c@minted@FancyVerbLineTemp=\count357
-\c@minted@pygmentizecounter=\count358
+\c@minted@FancyVerbLineTemp=\count358
+\c@minted@pygmentizecounter=\count359
 Package newfloat Info: New float `listing' with options `fileext=lol,placement=
 tbp' on input line 1221.
-\c@listing=\count359
+\c@listing=\count360
 Package newfloat Info: float type `listing'=4 on input line 1221.
-\c@loldepth=\count360
+\c@loldepth=\count361
 )
 runsystem(mkdir -p ./build/_minted-README)...executed.
 
 
-
-! Package tocloft Error: listing has been previously defined.
-
-See the tocloft package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94 ...l\bfseries\normalsize List of codes\hfill}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\cftbeforelistingskip=\skip109
-\cftlistingindent=\skip110
-\cftlistingnumwidth=\skip111
-
-! LaTeX Error: Command \c@loldepth already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94 ...l\bfseries\normalsize List of codes\hfill}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\cftbeforeloltitleskip=\skip112
-\cftafterloltitleskip=\skip113
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
 
@@ -895,14 +864,14 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yd=\dimen304
 \w@pgf@writea=\write5
 \r@pgf@reada=\read5
-\c@pgf@counta=\count361
-\c@pgf@countb=\count362
-\c@pgf@countc=\count363
-\c@pgf@countd=\count364
+\c@pgf@counta=\count362
+\c@pgf@countb=\count363
+\c@pgf@countc=\count364
+\c@pgf@countd=\count365
 \t@pgf@toka=\toks40
 \t@pgf@tokb=\toks41
 \t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count365
+\pgf@sys@id@count=\count366
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -917,13 +886,13 @@ File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
 f
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfsys@objnum=\count366
+\pgfsys@objnum=\count367
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count367
-\pgfsyssoftpath@bigbuffer@items=\count368
+\pgfsyssoftpath@smallbuffer@items=\count368
+\pgfsyssoftpath@bigbuffer@items=\count369
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -936,7 +905,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen305
-\pgfmath@count=\count369
+\pgfmath@count=\count370
 \pgfmath@box=\box80
 \pgfmath@toks=\toks43
 \pgfmath@stack@operand=\toks44
@@ -961,7 +930,7 @@ tex)
 thmetics.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count370
+\c@pgfmathroundto@lastzeros=\count371
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
@@ -1000,7 +969,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box81
 \pgf@hbox=\box82
 \pgf@layerbox@main=\box83
-\pgf@picture@serial@count=\count371
+\pgf@picture@serial@count=\count372
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
@@ -1033,8 +1002,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen329
-\pgf@sys@shading@range@num=\count372
-\pgf@shadingcount=\count373
+\pgf@sys@shading@range@num=\count373
+\pgf@shadingcount=\count374
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -1090,9 +1059,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box87
 \tcb@lowerbox=\box88
 \tcb@phantombox=\box89
-\c@tcbbreakpart=\count374
-\c@tcblayer=\count375
-\c@tcolorbox@number=\count376
+\c@tcbbreakpart=\count375
+\c@tcblayer=\count376
+\c@tcolorbox@number=\count377
 \l__tcobox_tmpa_box=\box90
 \l__tcobox_tmpa_dim=\dimen332
 \tcb@temp=\box91
@@ -1102,10 +1071,10 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
-\c@tcbrastercolumn=\count377
-\c@tcbrasterrow=\count378
-\c@tcbrasternum=\count379
-\c@tcbraster=\count380
+\c@tcbrastercolumn=\count378
+\c@tcbrasterrow=\count379
+\c@tcbrasternum=\count380
+\c@tcbraster=\count381
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -1127,7 +1096,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count381
+\pgf@plot@mark@count=\count382
 \pgfplotmarksize=\dimen335
 )
 \tikz@lastx=\dimen336
@@ -1142,18 +1111,18 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box96
 \tikz@tempbox=\box97
 \tikz@tempbox@bg=\box98
-\tikztreelevel=\count382
-\tikznumberofchildren=\count383
-\tikznumberofcurrentchild=\count384
-\tikz@fig@count=\count385
+\tikztreelevel=\count383
+\tikznumberofchildren=\count384
+\tikznumberofcurrentchild=\count385
+\tikz@fig@count=\count386
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count386
-\pgfmatrixcurrentcolumn=\count387
-\pgf@matrix@numberofcolumns=\count388
+\pgfmatrixcurrentrow=\count387
+\pgfmatrixcurrentcolumn=\count388
+\pgf@matrix@numberofcolumns=\count389
 )
-\tikz@expandcount=\count389
+\tikz@expandcount=\count390
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1191,29 +1160,29 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
 \tcbfitdim=\dimen344
 \tcb@lowerfitdim=\dimen345
 \tcb@upperfitdim=\dimen346
-\tcb@cur@hbadness=\count390
+\tcb@cur@hbadness=\count391
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count391
+\lst@mode=\count392
 \lst@gtempboxa=\box103
 \lst@token=\toks50
-\lst@length=\count392
+\lst@length=\count393
 \lst@currlwidth=\dimen347
-\lst@column=\count393
-\lst@pos=\count394
+\lst@column=\count394
+\lst@pos=\count395
 \lst@lostspace=\dimen348
 \lst@width=\dimen349
-\lst@newlines=\count395
-\lst@lineno=\count396
+\lst@newlines=\count396
+\lst@lineno=\count397
 \lst@maxwidth=\dimen350
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count397
-\lst@skipnumbers=\count398
+\c@lstnumber=\count398
+\lst@skipnumbers=\count399
 \lst@framebox=\box104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -1226,7 +1195,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
-\c@tcblisting=\count399
+\c@tcblisting=\count400
 ))
 Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. 
 Library `listings` is loaded instead. on input line 29.
@@ -1247,7 +1216,7 @@ File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
 ))
-\originalparskip=\skip114
+\originalparskip=\skip109
 )
 runsystem(command -v pygmentize && touch README.aex)...executed.
 
@@ -1391,7 +1360,7 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
-\c@lstlisting=\count400
+\c@lstlisting=\count401
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
 
@@ -1435,7 +1404,9 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
 (Font)              size <12> substituted on input line 27.
 
-(build/README.toc)
+[1
+
+] (build/README.toc)
 \tf@toc=\write7
 \openout7 = `README.toc'.
 
@@ -1447,63 +1418,61 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
 \tf@lot=\write9
 \openout9 = `README.lot'.
 
-
-! Undefined control sequence.
-<argument> ... \listoftables \fi \iftotallistings 
-                                                  \listoflistings \fi } \end...
-l.27 \cover[width=1.35\textwidth][continue]
-                                           
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-(build/README.lol)
+ (build/README.lol)
 \tf@lol=\write10
 \openout10 = `README.lol'.
 
-
-! Extra \fi.
-<argument> ...iftotallistings \listoflistings \fi 
-                                                  } \end {minipage}
-l.27 \cover[width=1.35\textwidth][continue]
-                                           
-I'm ignoring this; it doesn't match any \if.
-
-[1
-
-
-
-
-
-]
-File: ./README.pdf Graphic file (type pdf)
-<use ./README.pdf>
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [2
+[2]
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [3
 
 
 ]
 \openout3 = `README.pyg'.
 
  (./build/_minted-README/emacs.pygstyle)
-(./build/_minted-README/0C4AE0B96A781737B982824B267810101276FAE8187F6E8CFAC35DE
+(./build/_minted-README/B4C91941BA5F853A2C04D2A3D5A6D185E10C4E5CA610999DBC0A2F5
+F73A0DF84.pygtex)
+Overfull \hbox (51.30801pt too wide) in paragraph at lines 55--58
+[]\TU/FreeSans(0)/m/it/10 home/rhyloo/Documents/L[]T[]X/Reporti/reporti.cls /ho
+me/rhyloo/texmf/tex/latex/local/reporti.cls /home/rhyloo\TU/FreeSans(0)/m/n/10 
+.emacs.d/reporti.cls
+ []
+
+
+Overfull \hbox (8.23102pt too wide) in paragraph at lines 55--58
+\TU/FreeSans(0)/m/n/10 /home/rhyloo/snap/languagetool/45/Documents/L[]T[]X/Repo
+rti/reporti.cls /home/rhyloo/snap/languagetool/current/Doc-
+ []
+
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+[4
+
+]
+\openout3 = `README.pyg'.
+
+
+(./build/_minted-README/EBC306A6E0B0D64A61EC7DCA35EA48ED1276FAE8187F6E8CFAC35DE
 522237C23.pygtex
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 )
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 80.
 File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use ./figures/logo/rhyloo_solutions_horizontal.pdf>
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [3
+ [5
 
 ]
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [4
+ [6
 
 ]
 \openout3 = `README.pyg'.
@@ -1514,7 +1483,7 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 \openout3 = `README.pyg'.
 
 
-(./build/_minted-README/F21EBF470AF1A005D18D8873771F58A01276FAE8187F6E8CFAC35DE
+(./build/_minted-README/124C391A717B31E52753CC9B9942C4901276FAE8187F6E8CFAC35DE
 522237C23.pygtex)
 \openout3 = `README.pyg'.
 
@@ -1524,11 +1493,11 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 \openout3 = `README.pyg'.
 
 
-(./build/_minted-README/66849C1D8E151A5AD2D13928A700C3E01276FAE8187F6E8CFAC35DE
+(./build/_minted-README/080F63FE3E36431E5C78591C3C20D5371276FAE8187F6E8CFAC35DE
 522237C23.pygtex
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [5
+ [7
 
 ])
 \openout3 = `README.pyg'.
@@ -1539,23 +1508,8 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 \openout3 = `README.pyg'.
 
 
-(./build/_minted-README/FF9C44DB683C8BFD520D652722894B541276FAE8187F6E8CFAC35DE
+(./build/_minted-README/511CF85F0D64B52E10A75E71C00E5FE31276FAE8187F6E8CFAC35DE
 522237C23.pygtex
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [6])
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/0F8F207382919CC3537016C53472E3ED1276FAE8187F6E8CFAC35DE
-522237C23.pygtex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
  [8]
@@ -1563,7 +1517,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [9]
+ [9])
+\openout3 = `README.pyg'.
+
+
+(./build/_minted-README/3B780E293316E54A458AE1D201C537BD1276FAE8187F6E8CFAC35DE
+522237C23.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
@@ -1578,11 +1537,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [12])
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [15])
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
 
-[13] (build/README.aux)
+[16]
+LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <12> not available
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 595.
+
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [17
+
+] (build/README.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1593,17 +1575,17 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.72pt have occurred.
 
 Package rerunfilecheck Info: File `README.out' has not changed.
-(rerunfilecheck)             Checksum: 3766709ECC057514AF4D1FDE14090B60;947.
+(rerunfilecheck)             Checksum: CE02F73C893277D47514E94F737ABBE0;2334.
 runsystem(rm ./build//README.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 40095 strings out of 476824
- 860507 string characters out of 5803867
- 1933627 words of memory out of 5000000
- 61294 multiletter control sequences out of 15000+600000
- 569601 words of font info for 116 fonts, out of 8000000 for 9000
+ 40052 strings out of 476824
+ 860329 string characters out of 5803867
+ 1931627 words of memory out of 5000000
+ 61244 multiletter control sequences out of 15000+600000
+ 569674 words of font info for 118 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 106i,15n,131p,794b,827s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,15n,131p,799b,827s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/README.xdv (13 pages, 294388 bytes).
+Output written on build/README.xdv (17 pages, 357236 bytes).

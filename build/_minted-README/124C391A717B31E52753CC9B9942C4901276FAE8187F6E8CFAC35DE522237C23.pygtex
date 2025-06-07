@@ -3,6 +3,12 @@
     \PYG{k}{\PYGZbs{}PassOptionsToPackage}\PYG{n+nb}{\PYGZob{}}draft\PYG{n+nb}{\PYGZcb{}\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}
     \PYG{k}{\PYGZbs{}AtEndOfClass}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}draftwatermark\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}SetWatermarkText}\PYG{n+nb}{\PYGZob{}}DRAFT\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
 \PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}mylang\PYG{n+nb}{\PYGZcb{}\PYGZob{}}english\PYG{n+nb}{\PYGZcb{}}
+\PYG{c}{\PYGZpc{} Language options}
+\PYG{k}{\PYGZbs{}DeclareOption}\PYG{n+nb}{\PYGZob{}}spanish\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}mylang\PYG{n+nb}{\PYGZcb{}\PYGZob{}}spanish\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}DeclareOption}\PYG{n+nb}{\PYGZob{}}english\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}@}mylang\PYG{n+nb}{\PYGZcb{}\PYGZob{}}english\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
 \PYG{k}{\PYGZbs{}DeclareOption*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}PassOptionsToClass}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}CurrentOption}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
 \PYG{k}{\PYGZbs{}ProcessOptions\PYGZbs{}relax}
 \end{Verbatim}

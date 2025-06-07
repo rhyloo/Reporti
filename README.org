@@ -1,5 +1,5 @@
 #+title: Reporti: TI-Inspired LaTeX Template.
-#+latex_class_options: 
+#+latex_class_options: [english]
 #+latex_class: reporti
 #+options: toc:nil author:nil date:nil title:nil ::t prop:nil ^:t
 #+language: en
@@ -13,16 +13,19 @@
 #+LATEX:\type{README}
 #+LATEX:\projectcode{REPORTI_DOC_TEMPLATE_v0.0}
 
-#+LATEX:\summary{}
+#+LATEX:\summary{This document pretend to be the documentation of Reporti: A Texas-Instruments inspired LaTeX template.}
 
 #+LATEX:\notes{Just copy it and modify under MIT.}
 
-#+LATEX:\cover[width=1.35\textwidth][continue]
+#+LATEX:\cover[width=1.35\textwidth][next]
 
-
+#+begin_export markdown
+> [!NOTE]
+> This is a note.
+#+end_export
 
 * Motivation
-At college I read lot of documents about electronics. One of my favorites was /[[https://e2echina.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf][Op Amps for everyone]]/ from Texas Instruments (TI). If you take a moment to analyse the documents in the ~TI_Examples~ folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a LaTeX template. To be honest with you, I don't use LaTeX in my company, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write lab reports or notes for some crazy school project. :D
+At college I read lot of documents about electronics. One of my favorites was /[[https://e2echina.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf][Op Amps for everyone]]/ from Texas Instruments (TI). If you take a moment to analyse the documents in the ~TI_Examples~ folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a LaTeX template. To be honest with you, I don't use LaTeX where I work, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write good nice reports or notes for some crazy school project. :D
 
 So, here is the first version of Reporti, a Texas Instruments-inspired LaTeX template for you all.
 
@@ -41,15 +44,31 @@ So sorry if it is a mesh on github, I recommend you read README.pdf
 \end{tcolorbox}
 #+end_export
 
+* How to use
+If you are planning to use this template with LaTeX with linux download ~reporti.csl~ and put it in the path ....
+
+#+begin_src bash :results drawer replace :exports both :tangle no 
+find -L /home -samefile ./../Reporti/reporti.cls # 
+#+end_src
+
+#+RESULTS:
+:results:
+/home/rhyloo/Documents/LaTeX/Reporti/reporti.cls
+/home/rhyloo/texmf/tex/latex/local/reporti.cls
+/home/rhyloo/.emacs.d/reporti.cls
+/home/rhyloo/snap/languagetool/45/Documents/LaTeX/Reporti/reporti.cls
+/home/rhyloo/snap/languagetool/current/Documents/LaTeX/Reporti/reporti.cls
+:end:
+
 * Features
 ** Cover page
 Just trying to keep it simple. A .cls file based on report class.
 
-About features, the cover can be customize with the next commands: Check [[test_code]]
-#+Name:test_code
+About features, the cover can be customize with the next commands: Check 
+
 #+CAPTION: Control commands for the template
-#+begin_src latex :tangle no
-\documentclass[draft]{reporti}
+#+begin_src latex :tangle no :exports code
+\documentclass[draft]{reporti}  %
 \cover[width=1.35\textwidth][continue]
 \type{Name of doc type}
 \code{Project Number/Code} % For more info. Look for naming conventions
@@ -63,11 +82,13 @@ About features, the cover can be customize with the next commands: Check [[test_
 
 ** Table
 #+Caption: Changelog
+#+ATTR_LATEX: :placement [H]  
 |---------+-----------------+--------|
 | Version | Description     | Author |
 |---------+-----------------+--------|
 | v0.0    | Initial release | Rhyloo |
 |---------+-----------------+--------|
+
 ** Images
 #+ATTR_LATEX: :options fbox
 #+Caption: Rhyloo Solutions's logo
@@ -104,6 +125,12 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
     \PassOptionsToPackage{draft}{graphicx}
     \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{DRAFT}}
 }
+
+\newcommand{\@mylang}{english}
+% Language options
+\DeclareOption{spanish}{\renewcommand{\@mylang}{spanish}}
+\DeclareOption{english}{\renewcommand{\@mylang}{english}}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 #+end_src
@@ -115,6 +142,7 @@ I added package geometry becuase I need to config headheight, and page geometry:
 \setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
 \geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
 #+end_src
+
 Encabezados/pies de página. I defined two styles.
 1. mainstyle: Used for full document elaboration
 2. tocstyle: Used by tocs.
@@ -142,7 +170,7 @@ Encabezados/pies de página. I defined two styles.
   \renewcommand{\footrulewidth}{1.5pt}
   \ifdefvoid{\@logo}{}{%
     \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-      \href{www.rhyloo.com}{www.rhyloo.com}}
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
   }
   \fancyhead[LE,RO]{}
   \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
@@ -163,7 +191,11 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
-\RequirePackage[english]{babel}% Localización
+
+% Default: English
+
+\RequirePackage[\@mylang]{babel}
+
 
 \RequirePackage{hyperref}      % Hipervínculos
 \hypersetup{
@@ -186,9 +218,9 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{float}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage[titles]{tocloft}
+\RequirePackage{tocloft}
 \RequirePackage[tableposition=above]{caption}
-\RequirePackage[figure,table]{totalcount}
+\RequirePackage[figure,table,listing]{totalcount}
 \RequirePackage{xstring} % Add near the top of the file
 \RequirePackage{underscore}
 \RequirePackage{longtable}
@@ -200,18 +232,37 @@ Encabezados/pies de página. I defined two styles.
 \RequirePackage{capt-of}
 
 
-
 \RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
-\newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
+%% \newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
 \RequirePackage{caption}
-\newenvironment{code}{\captionsetup{type=listing}}{}
+
+%% \newenvironment{code}{\captionsetup{type=listing}}{}
+% Configure the listing environment
+
+%% \captionsetup[listing]{
+%%   name=Código, % Sets the caption name to "Código"
+%%   %% listname=Lista de códigos % Name of the list of listings
+%% }
+
+\newcommand{\test}{Code}
+
 \SetupFloatingEnvironment{listing}{%
-  name={Code},
-  fileext=lol}
-\renewcommand{\cftlistingpresnum}{Code~}
-\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
-\setlength{\cftlistingnumwidth}{5em}
+  name={\test}}
+\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}}
+%% \renewcommand{\cftlistingpresnum}{Code~}
+
+%% \setlength{\cftlistingnumwidth}{5em}
+
+% define a command that only prints the list if there is at least one listing
+\newcommand{\maybeListOfListings}{%
+  % \c@listing is the internal counter for float “listing”
+  \ifnumcomp{\value{listing}}{>}{0}{%
+    \listoflistings
+  }{%
+    No work!
+  }%
+}
 
 \RequirePackage[most]{tcolorbox}
 % Configuración de datetime2 para español
@@ -271,9 +322,6 @@ Encabezados/pies de página. I defined two styles.
 
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-
-
-
 % --- Redefinir marcas para ignorar subsecciones ---
 \renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
 \renewcommand{\subsectionmark}[1]{} % Subsecciones no modifican los headers
@@ -291,9 +339,6 @@ Encabezados/pies de página. I defined two styles.
   \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}}
   \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \normalfont\thepage}}
 }
-
-
-
 
 % ========================
 % 4. Estilos de Títulos
@@ -332,6 +377,7 @@ Encabezados/pies de página. I defined two styles.
 % 6. Cover
 % ========================
 \NewDocumentCommand{\cover}{O{width=0.8\textwidth} O{}}{%
+  \pagestyle{empty}
   \begingroup % Grupo local para cambios de espaciado
   % Save the original parskip value
   \setlength{\originalparskip}{\parskip}
@@ -398,29 +444,48 @@ Encabezados/pies de página. I defined two styles.
         }
         \ifstrequal{#2}{continue}{
           \tocloftpagestyle{titlepagestyle}
-          \vspace{0.75cm}
+          %% \vspace{0.75cm}
 
           \hspace{1.75cm}
           \begin{minipage}{13.6cm}
             {\fontsize{9}{35}\selectfont
               \tableofcontents
-              \vspace{1em}
               \iftotalfigures
               \listoffigures
               \fi
-              \vspace{1em}
               \iftotaltables
               \listoftables
               \fi
               \iftotallistings
               \listoflistings
-              \fi}
-          \end{minipage}}{}
+              %% \maybeListOfListings
+              \fi
+            }
+          \end{minipage}
         \vfill
         \ifdefvoid{\@notes}{}{%
           \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
   \end{titlepage}
+  \endgroup}{
+          \vfill
+          \ifdefvoid{\@notes}{}{%
+          \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
+  \end{titlepage}
   \endgroup
+  \tocloftpagestyle{tocstyle}
+  \pagestyle{tocstyle}
+  \tableofcontents
+  \iftotalfigures
+  \listoffigures
+  \fi
+  \iftotaltables
+  \listoftables
+  \fi
+  \iftotallistings
+  \listoflistings
+  %% \maybeListOfListings
+  \fi
+  }
   \clearpage
   \pagestyle{mainstyle}
 }
@@ -429,7 +494,7 @@ Encabezados/pies de página. I defined two styles.
   \clearpage
 }
 
-\tocloftpagestyle{tocstyle}
+
 \setlength{\cftbeforesecskip}{0pt}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftdotsep}{1}% Default is 4.5
@@ -476,20 +541,42 @@ Encabezados/pies de página. I defined two styles.
   }{}{}
 \makeatother
 
+
+
 \addto\captionsspanish{%
   \renewcommand{\contentsname}{\hfill\bfseries\normalsize Contenido\hfill}
+  \renewcommand{\figurename}{Figura} % Override figure name globally
   \renewcommand{\tablename}{Tabla}
+  \renewcommand{\test}{Código}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
-\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
+\renewcommand{\listlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+}
 
 \addto\captionsenglish{%
   \renewcommand{\contentsname}{\hfill\bfseries\normalsize Content\hfill}
   \renewcommand{\tablename}{Table}
+  \renewcommand{\figurename}{Figure} % Override figure name globally
+  \renewcommand{\test}{Code}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize List of figures\hfill}
-\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}
+\renewcommand{\listlistingname}{\hfill\bfseries\normalsize List of codes\hfill}
+}
 
+\makeatletter
+\renewcommand{\l@listing}[2]{%
+  \renewcommand{\figurename}{\test} % Override figure name globally
+  \l@figure{#1}{#2}%
+}
+\makeatother
 
+\tocloftpagestyle{tocstyle}
 #+end_src
+* Known - Bugs
+** TODO If there more than X sections the template do crazy things.
+** TODO Change langs is not easy as I want.
+** TODO Adjust toc style not in header
+** TODO Modificar la web del header
 * COMMENT Local variables
 Local Variables:
 eval: (add-hook 'after-save-hook

@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[draft]}\PYG{n+nb}{\PYGZob{}}reporti\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[draft]}\PYG{n+nb}{\PYGZob{}}reporti\PYG{n+nb}{\PYGZcb{}}  \PYG{c}{\PYGZpc{}}
 \PYG{k}{\PYGZbs{}cover}\PYG{n+na}{[width=1.35\PYGZbs{}textwidth][continue]}
 \PYG{k}{\PYGZbs{}type}\PYG{n+nb}{\PYGZob{}}Name of doc type\PYG{n+nb}{\PYGZcb{}}
 \PYG{k}{\PYGZbs{}code}\PYG{n+nb}{\PYGZob{}}Project Number/Code\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} For more info. Look for naming conventions}

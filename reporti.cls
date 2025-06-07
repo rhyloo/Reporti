@@ -6,6 +6,12 @@
     \PassOptionsToPackage{draft}{graphicx}
     \AtEndOfClass{\usepackage{draftwatermark}\SetWatermarkText{DRAFT}}
 }
+
+\newcommand{\@mylang}{english}
+% Language options
+\DeclareOption{spanish}{\renewcommand{\@mylang}{spanish}}
+\DeclareOption{english}{\renewcommand{\@mylang}{english}}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
@@ -36,7 +42,7 @@
   \renewcommand{\footrulewidth}{1.5pt}
   \ifdefvoid{\@logo}{}{%
     \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
-      \href{www.rhyloo.com}{www.rhyloo.com}}
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
   }
   \fancyhead[LE,RO]{}
   \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
@@ -51,7 +57,11 @@
 \RequirePackage{xcolor}        % Manejo de colores
 \RequirePackage{titlesec}      % Estilos de secciones
 \RequirePackage{graphicx}      % Manejo de imágenes
-\RequirePackage[english]{babel}% Localización
+
+% Default: English
+
+\RequirePackage[\@mylang]{babel}
+
 
 \RequirePackage{hyperref}      % Hipervínculos
 \hypersetup{
@@ -74,9 +84,9 @@
 \RequirePackage{float}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage[titles]{tocloft}
+\RequirePackage{tocloft}
 \RequirePackage[tableposition=above]{caption}
-\RequirePackage[figure,table]{totalcount}
+\RequirePackage[figure,table,listing]{totalcount}
 \RequirePackage{xstring} % Add near the top of the file
 \RequirePackage{underscore}
 \RequirePackage{longtable}
@@ -88,18 +98,37 @@
 \RequirePackage{capt-of}
 
 
-
 \RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
-\newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
+%% \newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
 \RequirePackage{caption}
-\newenvironment{code}{\captionsetup{type=listing}}{}
+
+%% \newenvironment{code}{\captionsetup{type=listing}}{}
+% Configure the listing environment
+
+%% \captionsetup[listing]{
+%%   name=Código, % Sets the caption name to "Código"
+%%   %% listname=Lista de códigos % Name of the list of listings
+%% }
+
+\newcommand{\test}{Code}
+
 \SetupFloatingEnvironment{listing}{%
-  name={Code},
-  fileext=lol}
-\renewcommand{\cftlistingpresnum}{Code~}
-\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}.}
-\setlength{\cftlistingnumwidth}{5em}
+  name={\test}}
+\renewcommand{\thelisting}{\arabic{section}-\arabic{listing}}
+%% \renewcommand{\cftlistingpresnum}{Code~}
+
+%% \setlength{\cftlistingnumwidth}{5em}
+
+% define a command that only prints the list if there is at least one listing
+\newcommand{\maybeListOfListings}{%
+  % \c@listing is the internal counter for float “listing”
+  \ifnumcomp{\value{listing}}{>}{0}{%
+    \listoflistings
+  }{%
+    No work!
+  }%
+}
 
 \RequirePackage[most]{tcolorbox}
 % Configuración de datetime2 para español
@@ -156,9 +185,6 @@
 
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-
-
-
 % --- Redefinir marcas para ignorar subsecciones ---
 \renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
 \renewcommand{\subsectionmark}[1]{} % Subsecciones no modifican los headers
@@ -176,9 +202,6 @@
   \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}}
   \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \normalfont\thepage}}
 }
-
-
-
 
 % ========================
 % 4. Estilos de Títulos
@@ -217,6 +240,7 @@
 % 6. Cover
 % ========================
 \NewDocumentCommand{\cover}{O{width=0.8\textwidth} O{}}{%
+  \pagestyle{empty}
   \begingroup % Grupo local para cambios de espaciado
   % Save the original parskip value
   \setlength{\originalparskip}{\parskip}
@@ -283,29 +307,48 @@
         }
         \ifstrequal{#2}{continue}{
           \tocloftpagestyle{titlepagestyle}
-          \vspace{0.75cm}
+          %% \vspace{0.75cm}
 
           \hspace{1.75cm}
           \begin{minipage}{13.6cm}
             {\fontsize{9}{35}\selectfont
               \tableofcontents
-              \vspace{1em}
               \iftotalfigures
               \listoffigures
               \fi
-              \vspace{1em}
               \iftotaltables
               \listoftables
               \fi
               \iftotallistings
               \listoflistings
-              \fi}
-          \end{minipage}}{}
+              %% \maybeListOfListings
+              \fi
+            }
+          \end{minipage}
         \vfill
         \ifdefvoid{\@notes}{}{%
           \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
   \end{titlepage}
+  \endgroup}{
+          \vfill
+          \ifdefvoid{\@notes}{}{%
+          \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
+  \end{titlepage}
   \endgroup
+  \tocloftpagestyle{tocstyle}
+  \pagestyle{tocstyle}
+  \tableofcontents
+  \iftotalfigures
+  \listoffigures
+  \fi
+  \iftotaltables
+  \listoftables
+  \fi
+  \iftotallistings
+  \listoflistings
+  %% \maybeListOfListings
+  \fi
+  }
   \clearpage
   \pagestyle{mainstyle}
 }
@@ -314,7 +357,7 @@
   \clearpage
 }
 
-\tocloftpagestyle{tocstyle}
+
 \setlength{\cftbeforesecskip}{0pt}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftdotsep}{1}% Default is 4.5
@@ -361,14 +404,33 @@
   }{}{}
 \makeatother
 
+
+
 \addto\captionsspanish{%
   \renewcommand{\contentsname}{\hfill\bfseries\normalsize Contenido\hfill}
+  \renewcommand{\figurename}{Figura} % Override figure name globally
   \renewcommand{\tablename}{Tabla}
+  \renewcommand{\test}{Código}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize Lista de figuras\hfill}
-\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize Lista de tablas\hfill}
+\renewcommand{\listlistingname}{\hfill\bfseries\normalsize Lista de códigos\hfill}
+}
 
 \addto\captionsenglish{%
   \renewcommand{\contentsname}{\hfill\bfseries\normalsize Content\hfill}
   \renewcommand{\tablename}{Table}
+  \renewcommand{\figurename}{Figure} % Override figure name globally
+  \renewcommand{\test}{Code}
 \renewcommand{\listfigurename}{\hfill\bfseries\normalsize List of figures\hfill}
-\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}}
+\renewcommand{\listtablename}{\hfill\bfseries\normalsize List of tables\hfill}
+\renewcommand{\listlistingname}{\hfill\bfseries\normalsize List of codes\hfill}
+}
+
+\makeatletter
+\renewcommand{\l@listing}[2]{%
+  \renewcommand{\figurename}{\test} % Override figure name globally
+  \l@figure{#1}{#2}%
+}
+\makeatother
+
+\tocloftpagestyle{tocstyle}
