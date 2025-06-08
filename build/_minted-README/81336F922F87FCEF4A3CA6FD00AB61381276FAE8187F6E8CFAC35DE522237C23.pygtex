@@ -46,35 +46,16 @@
 
 \PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[newfloat,outputdir=./build]}\PYG{n+nb}{\PYGZob{}}minted\PYG{n+nb}{\PYGZcb{}}
 \PYG{k}{\PYGZbs{}usemintedstyle}\PYG{n+nb}{\PYGZob{}}emacs\PYG{n+nb}{\PYGZcb{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}newlistof\PYGZob{}listing\PYGZcb{}\PYGZob{}lol\PYGZcb{}\PYGZob{}\PYGZbs{}hfill\PYGZbs{}bfseries\PYGZbs{}normalsize List of codes\PYGZbs{}hfill\PYGZcb{}}
 \PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}caption\PYG{n+nb}{\PYGZcb{}}
-
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}newenvironment\PYGZob{}code\PYGZcb{}\PYGZob{}\PYGZbs{}captionsetup\PYGZob{}type=listing\PYGZcb{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
-\PYG{c}{\PYGZpc{} Configure the listing environment}
-
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}captionsetup[listing]\PYGZob{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{}   name=Código, \PYGZpc{} Sets the caption name to \PYGZdq{}Código\PYGZdq{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{}   \PYGZpc{}\PYGZpc{} listname=Lista de códigos \PYGZpc{} Name of the list of listings}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZcb{}}
 
 \PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}test}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Code\PYG{n+nb}{\PYGZcb{}}
 
 \PYG{k}{\PYGZbs{}SetupFloatingEnvironment}\PYG{n+nb}{\PYGZob{}}listing\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
   name=\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}test}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
 \PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}thelisting}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}arabic}\PYG{n+nb}{\PYGZob{}}section\PYG{n+nb}{\PYGZcb{}}\PYGZhy{}\PYG{k}{\PYGZbs{}arabic}\PYG{n+nb}{\PYGZob{}}listing\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}renewcommand\PYGZob{}\PYGZbs{}cftlistingpresnum\PYGZcb{}\PYGZob{}Code\PYGZti{}\PYGZcb{}}
 
-\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}setlength\PYGZob{}\PYGZbs{}cftlistingnumwidth\PYGZcb{}\PYGZob{}5em\PYGZcb{}}
 
-\PYG{c}{\PYGZpc{} define a command that only prints the list if there is at least one listing}
-\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}maybeListOfListings}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-  \PYG{c}{\PYGZpc{} \PYGZbs{}c@listing is the internal counter for float “listing”}
-  \PYG{k}{\PYGZbs{}ifnumcomp}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}value}\PYG{n+nb}{\PYGZob{}}listing\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYGZgt{}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-    \PYG{k}{\PYGZbs{}listoflistings}
-  \PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
-    No work!
-  \PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
-\PYG{n+nb}{\PYGZcb{}}
+
 
 \PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+na}{[most]}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}
 \PYG{c}{\PYGZpc{} Configuración de datetime2 para español}

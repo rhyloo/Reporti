@@ -19,8 +19,41 @@
 \setlength{\headheight}{50pt} % 32.05278pt mínimo requerido + margen de seguridad
 \geometry{top=3cm, bottom=2.5cm, left=1.83cm, right=1.83cm, footskip=1.2cm}
 
-\RequirePackage{fancyhdr}      
+\RequirePackage{fancyhdr}
+
 \fancypagestyle{mainstyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
+    }
+  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+    }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \ifdefvoid{\@logo}{}{%
+    \fancyhead[RE,LO]{\includegraphics[height=2em]{\@logo}\par
+      \href{www.rhyloo.com}{www.rhyloo.com}\par\par}
+    }
+  \fancyhead[LE,RO]{\nouppercase{\rightmark}}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{\fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{%
+    \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
+    }
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{empty}{
   \fancyhf{}
   \renewcommand{\headrulewidth}{2pt}
   \renewcommand{\footrulewidth}{1.5pt}
@@ -50,6 +83,16 @@
     \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}
   }
   \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \thepage}}
+}
+
+\fancypagestyle{titlepagestyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{1.5pt}
+  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
+  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{
+  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}}
+  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \normalfont\thepage}}
 }
 
 \RequirePackage{xparse}        % Para comandos avanzados
@@ -100,35 +143,16 @@
 
 \RequirePackage[newfloat,outputdir=./build]{minted}
 \usemintedstyle{emacs}
-%% \newlistof{listing}{lol}{\hfill\bfseries\normalsize List of codes\hfill}
 \RequirePackage{caption}
-
-%% \newenvironment{code}{\captionsetup{type=listing}}{}
-% Configure the listing environment
-
-%% \captionsetup[listing]{
-%%   name=Código, % Sets the caption name to "Código"
-%%   %% listname=Lista de códigos % Name of the list of listings
-%% }
 
 \newcommand{\test}{Code}
 
 \SetupFloatingEnvironment{listing}{%
   name={\test}}
 \renewcommand{\thelisting}{\arabic{section}-\arabic{listing}}
-%% \renewcommand{\cftlistingpresnum}{Code~}
 
-%% \setlength{\cftlistingnumwidth}{5em}
 
-% define a command that only prints the list if there is at least one listing
-\newcommand{\maybeListOfListings}{%
-  % \c@listing is the internal counter for float “listing”
-  \ifnumcomp{\value{listing}}{>}{0}{%
-    \listoflistings
-  }{%
-    No work!
-  }%
-}
+
 
 \RequirePackage[most]{tcolorbox}
 % Configuración de datetime2 para español
@@ -184,24 +208,8 @@
 
 
 \renewcommand{\sectionmark}[1]{\markright{#1}}
-
-% --- Redefinir marcas para ignorar subsecciones ---
-\renewcommand{\sectionmark}[1]{\markright{#1}} % Actualiza solo \rightmark
 \renewcommand{\subsectionmark}[1]{} % Subsecciones no modifican los headers
 
-
-\pagestyle{mainstyle}
-
-
-\fancypagestyle{titlepagestyle}{
-  \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{1.5pt}
-  \fancyhf{}
-  \fancyfoot[LE]{{\fontsize{8}{35}\selectfont \thepage \hspace{0.8cm} \itshape\@title}}
-  \ifdefvoid{\@contact}{  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}}}}{
-  \fancyfoot[RE,LO]{{\fontsize{8}{35}\selectfont \ifdefvoid{\@projectcode}{}{\@projectcode}\\\itshape\@contact}}}
-  \fancyfoot[RO]{{\fontsize{8}{35}\selectfont  \itshape\@title \hspace{0.8cm} \normalfont\thepage}}
-}
 
 % ========================
 % 4. Estilos de Títulos
@@ -233,123 +241,108 @@
 \titlespacing{\subsection}{0pt}{12pt}{6pt}
 \titlespacing{\subsubsection}{0pt}{12pt}{6pt}
 
-
-
 \newlength{\originalparskip}
 % ========================
 % 6. Cover
 % ========================
-\NewDocumentCommand{\cover}{O{width=0.8\textwidth} O{}}{%
-  \pagestyle{empty}
+\NewDocumentCommand{\cover}{
+  O{width=0.8\textwidth}  % #1 = width spec (default 0.8\textwidth)
+  O{}                     % #2 = “continue” flag (default empty)
+}{%
   \begingroup % Grupo local para cambios de espaciado
-  % Save the original parskip value
-  \setlength{\originalparskip}{\parskip}
-  \renewcommand{\baselinestretch}{0.4} % Ajuste principal (20% más de espacio)
-  \renewcommand{\parskip}{\originalparskip} % Ajuste principal (20% más de espacio)
+  \pagestyle{tocstyle} %
+  \setlength{\originalparskip}{\parskip} %
+  \renewcommand{\baselinestretch}{0.4}%
+  \renewcommand{\parskip}{\originalparskip}%
   \begin{titlepage}
-  \thispagestyle{titlepagestyle} % <--- Aplica el footer
-    % --------------------------
-    % Cabecera con logo y datos institucionales
-  % --------------------------
-  \ifdefvoid{\@logo}
-            {\vspace*{4em}}{}
-  \noindent\begin{minipage}[t]{0.4\textwidth}
-  \ifdefvoid{\@logo}
-            {}
-            {\includegraphics[#1]{\@logo}}
-    %% \vspace{-1.5\baselineskip} % Alineación precisa
+    \thispagestyle{titlepagestyle}
+    % —– HEADER WITH LOGO & INSTITUTIONAL DATA —–
+    \ifdefvoid{\@logo}{\vspace*{2em}}{
+    \noindent\begin{minipage}[t]{0.4\textwidth}
+    \includegraphics[#1]{\@logo}
     \end{minipage}%
-    \hfill
+    }
+    \hfill    
     \begin{minipage}[t]{0.6\textwidth}
-      \vspace{-2\baselineskip} % Alineación precisa
+      \vspace{-2\baselineskip}
       \raggedleft
       \ifdef{\@type}{\fontsize{14}{35}\selectfont\itshape\@type}{}\par
       \ifdef{\@projectcode}{\fontsize{9}{35}\selectfont\itshape\@projectcode}{}
-
     \end{minipage}
     
-    \vspace{0.5\baselineskip} % Alineación precisa
+    \vspace{0.5\baselineskip} 
 
+    % —– TITLE —–
     \begin{flushright}
       {\fontsize{18}{35}\selectfont\bfseries\itshape\@title}
     \end{flushright}
-    \vspace*{-1\baselineskip} % Reduce espacio posterior
-        {\rule{\textwidth}{2pt}}
+    \vspace*{-1\baselineskip} 
+    \rule{\textwidth}{2pt}
 
-        \noindent\begin{minipage}{0.7\textwidth}
-        \raggedright
-        \ifdef{\@author}{%
-          {\fontsize{10}{35}\selectfont\itshape\@author}
-        }{}
-        \end{minipage}
-        \hfill
-        \begin{minipage}{0.25\textwidth}
-        \raggedleft
-        \ifdef{\@subtitle}{%
-          {\fontsize{10}{35}\selectfont\itshape\@subtitle}
-        }{}
-        \end{minipage}
+    % —– AUTHOR & SUBTITLE —–
+    \noindent\begin{minipage}{0.7\textwidth}
+    \raggedright
+    \ifdef{\@author}{{\fontsize{10}{35}\selectfont\itshape\@author}}{}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+      \raggedleft
+      \ifdef{\@subtitle}{{\fontsize{10}{35}\selectfont\itshape\@subtitle}}{}
+    \end{minipage}
 
-        % --------------------------
-        % Summary condicional
-        % --------------------------
-        \ifdefvoid{\@summary}{}{%
-          \vspace{0.75cm}
-
-          \hspace{1.75cm}
-          \begin{minipage}{13.6cm}
-            \begin{center}
-              \noindent{\bfseries ABSTRACT}
-              \end{center}
+    % —– ABSTRACT (IF ANY) —–
+    \ifdefvoid{\@summary}{}{%
+      \vspace{0.75cm}
+      
+      \hspace{1.75cm}
+      \begin{minipage}{13.6cm}
+        \begin{center}
+          \noindent{\bfseries ABSTRACT}
+        \end{center}
             {\fontsize{10}{35}\selectfont\@summary}\par
-            {\rule{\textwidth}{1pt}}
-          \end{minipage}
+            \rule{\textwidth}{1pt}
+      \end{minipage}
+    }
+    % —– EITHER “CONTINUE” CASE OR DEFAULT NOTES —–
+    \ifstrequal{#2}{continue}{
+      % ==== continue: TOC + lists *inside* the titlepage ====
+      \tocloftpagestyle{titlepagestyle}
+      
+      \hspace{1.75cm}
+      \begin{minipage}{13.6cm}
+        {\fontsize{9}{35}\selectfont
+          \tableofcontents
+          \iftotalfigures   \listoffigures  \fi
+          \iftotaltables    \listoftables   \fi
+          \iftotallistings  \listoflistings \fi
         }
-        \ifstrequal{#2}{continue}{
-          \tocloftpagestyle{titlepagestyle}
-          %% \vspace{0.75cm}
+    \end{minipage}}{}
+    \vfill
+    \ifdefvoid{\@notes}{}{%
+      \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
+  \end{titlepage}
 
-          \hspace{1.75cm}
-          \begin{minipage}{13.6cm}
-            {\fontsize{9}{35}\selectfont
-              \tableofcontents
-              \iftotalfigures
-              \listoffigures
-              \fi
-              \iftotaltables
-              \listoftables
-              \fi
-              \iftotallistings
-              \listoflistings
-              %% \maybeListOfListings
-              \fi
-            }
-          \end{minipage}
-        \vfill
-        \ifdefvoid{\@notes}{}{%
-          \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
-  \end{titlepage}
-  \endgroup}{
-          \vfill
-          \ifdefvoid{\@notes}{}{%
-          \noindent\raggedright{\fontsize{8}{35}\selectfont\@notes\vspace{-1\baselineskip}}}
-  \end{titlepage}
+    % —– EITHER “CONTINUE” CASE OR DEFAULT NOTES —–
   \endgroup
-  \tocloftpagestyle{tocstyle}
-  \pagestyle{tocstyle}
-  \tableofcontents
-  \iftotalfigures
-  \listoffigures
-  \fi
-  \iftotaltables
-  \listoftables
-  \fi
-  \iftotallistings
-  \listoflistings
-  %% \maybeListOfListings
-  \fi
-  }
+  
+  \ifstrequal{#2}{continue}{}{
+    \tocloftpagestyle{tocstyle}
+    \pagestyle{tocstyle}
+    \thispagestyle{tocstyle}
+    \tableofcontents
+    \pagestyle{tocstyle}
+    \thispagestyle{tocstyle}    
+    \iftotalfigures   \listoffigures  \fi
+        \pagestyle{tocstyle}
+    \thispagestyle{tocstyle}
+    \iftotaltables    \listoftables   \fi
+        \pagestyle{tocstyle}
+    \thispagestyle{tocstyle}
+    \iftotallistings    \listoflistings \fi
+    }
+  \markright{}     % Limpiar explícitamente rightmark
   \clearpage
+  %% \markboth{}{}   % Limpiar leftmark y rightmark
   \pagestyle{mainstyle}
 }
 
