@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.5.18)  8 JUN 2025 17:57
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.5.18)  8 JUN 2025 18:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1411,222 +1411,11 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
 
 [1
 
-] (build/README.toc
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [2])
+] (build/README.toc)
 \tf@toc=\write7
 \openout7 = `README.toc'.
 
- (build/README.lof
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [3]
-Overfull \hbox (1.64667pt too wide) detected at line 11
-\TU/FreeSans(0)/m/n/10 Figure 3-10. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 12
-\TU/FreeSans(0)/m/n/10 Figure 3-11. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 13
-\TU/FreeSans(0)/m/n/10 Figure 3-12. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 14
-\TU/FreeSans(0)/m/n/10 Figure 3-13. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 15
-\TU/FreeSans(0)/m/n/10 Figure 3-14. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 16
-\TU/FreeSans(0)/m/n/10 Figure 3-15. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 17
-\TU/FreeSans(0)/m/n/10 Figure 3-16. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 18
-\TU/FreeSans(0)/m/n/10 Figure 3-17. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 19
-\TU/FreeSans(0)/m/n/10 Figure 3-18. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 20
-\TU/FreeSans(0)/m/n/10 Figure 3-19. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 21
-\TU/FreeSans(0)/m/n/10 Figure 3-20. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 22
-\TU/FreeSans(0)/m/n/10 Figure 3-21. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 23
-\TU/FreeSans(0)/m/n/10 Figure 3-22. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 24
-\TU/FreeSans(0)/m/n/10 Figure 3-23. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 25
-\TU/FreeSans(0)/m/n/10 Figure 3-24. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 26
-\TU/FreeSans(0)/m/n/10 Figure 3-25. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 27
-\TU/FreeSans(0)/m/n/10 Figure 3-26. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 28
-\TU/FreeSans(0)/m/n/10 Figure 3-27. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 29
-\TU/FreeSans(0)/m/n/10 Figure 3-28. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 30
-\TU/FreeSans(0)/m/n/10 Figure 3-29. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 31
-\TU/FreeSans(0)/m/n/10 Figure 3-30. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 32
-\TU/FreeSans(0)/m/n/10 Figure 3-31. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 33
-\TU/FreeSans(0)/m/n/10 Figure 3-32. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 34
-\TU/FreeSans(0)/m/n/10 Figure 3-33. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 35
-\TU/FreeSans(0)/m/n/10 Figure 3-34. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 36
-\TU/FreeSans(0)/m/n/10 Figure 3-35. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 37
-\TU/FreeSans(0)/m/n/10 Figure 3-36. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 38
-\TU/FreeSans(0)/m/n/10 Figure 3-37. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 39
-\TU/FreeSans(0)/m/n/10 Figure 3-38. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 40
-\TU/FreeSans(0)/m/n/10 Figure 3-39. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 41
-\TU/FreeSans(0)/m/n/10 Figure 3-40. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 42
-\TU/FreeSans(0)/m/n/10 Figure 3-41. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 43
-\TU/FreeSans(0)/m/n/10 Figure 3-42. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 44
-\TU/FreeSans(0)/m/n/10 Figure 3-43. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 45
-\TU/FreeSans(0)/m/n/10 Figure 3-44. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 46
-\TU/FreeSans(0)/m/n/10 Figure 3-45. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 47
-\TU/FreeSans(0)/m/n/10 Figure 3-46. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 48
-\TU/FreeSans(0)/m/n/10 Figure 3-47. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 49
-\TU/FreeSans(0)/m/n/10 Figure 3-48. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 50
-\TU/FreeSans(0)/m/n/10 Figure 3-49. 
- []
-
-
-Overfull \hbox (1.64667pt too wide) detected at line 51
-\TU/FreeSans(0)/m/n/10 Figure 3-50. 
- []
-
-)
+ (build/README.lof)
 \tf@lof=\write8
 \openout8 = `README.lof'.
 
@@ -1634,48 +1423,45 @@ Overfull \hbox (1.64667pt too wide) detected at line 51
 \tf@lot=\write9
 \openout9 = `README.lot'.
 
- (build/README.lol
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [4]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [5])
+ (build/README.lol)
 \tf@lol=\write10
 \openout10 = `README.lol'.
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [6]
+[2]
+File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use figures/logo/rhyloo_solutions_horizontal.pdf>
+ [3
+
+]
 File: ./README.pdf Graphic file (type pdf)
 <use ./README.pdf>
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [7
-
+ [4
 
 ]
 \openout3 = `README.pyg'.
 
-
-(./build/_minted-README/emacs.pygstyle)
+ (./build/_minted-README/emacs.pygstyle)
 (./build/_minted-README/B4C91941BA5F853A2C04D2A3D5A6D185E10C4E5CA610999DBC0A2F5
 F73A0DF84.pygtex)
-Overfull \hbox (51.30801pt too wide) in paragraph at lines 51--54
+Overfull \hbox (51.30801pt too wide) in paragraph at lines 59--62
 []\TU/FreeSans(0)/m/it/10 home/rhyloo/Documents/L[]T[]X/Reporti/reporti.cls /ho
 me/rhyloo/texmf/tex/latex/local/reporti.cls /home/rhyloo\TU/FreeSans(0)/m/n/10 
 .emacs.d/reporti.cls
  []
 
 
-Overfull \hbox (8.23102pt too wide) in paragraph at lines 51--54
+Overfull \hbox (8.23102pt too wide) in paragraph at lines 59--62
 \TU/FreeSans(0)/m/n/10 /home/rhyloo/snap/languagetool/45/Documents/L[]T[]X/Repo
 rti/reporti.cls /home/rhyloo/snap/languagetool/current/Doc-
  []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
-[8
+[5
 
 ]
 \openout3 = `README.pyg'.
@@ -1687,389 +1473,17 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 )
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 75.
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
+t line 83.
+File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
+<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [9
+ [6
 
 ]
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [10]
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [11]
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [12]
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-\openout3 = `README.pyg'.
-
-
-(./build/_minted-README/ADB20504B4F81A252A0DB6F589B9BBB01276FAE8187F6E8CFAC35DE
-522237C23.pygtex)
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [13]
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: ./figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use ./figures/logo/rhyloo_solutions_horizontal.pdf>
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [14]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [15]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [16]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [17]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [18]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [19]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [20]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [21]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [22]
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
- [23
+ [7
 
 ]
 \openout3 = `README.pyg'.
@@ -2094,14 +1508,14 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 522237C23.pygtex
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [24
+ [8
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [25])
+ [9])
 \openout3 = `README.pyg'.
 
 
@@ -2114,63 +1528,54 @@ File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 522237C23.pygtex
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [26])
+ [10])
 \openout3 = `README.pyg'.
 
 
-(./build/_minted-README/9E082BD621A7F47C246B8DC74453A3471276FAE8187F6E8CFAC35DE
+(./build/_minted-README/3E9C30130263369037106858C94E9E0E1276FAE8187F6E8CFAC35DE
 522237C23.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [27]
+ [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [28]
+ [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [29]
+ [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [30]
+ [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [31]
+ [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [32])
+ [16])
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
 
-[33]
+[17]
 LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <12> not available
-(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 1154
-.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 591.
 
 File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
 <use figures/logo/rhyloo_solutions_horizontal.pdf>
- [34
+ [18
 
-]
-Overfull \vbox (1309.2415pt too high) has occurred while \output is active []
-
-File: figures/logo/rhyloo_solutions_horizontal.pdf Graphic file (type pdf)
-<use figures/logo/rhyloo_solutions_horizontal.pdf>
-
-[35] (build/README.aux)
+] (build/README.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2181,17 +1586,17 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.72pt have occurred.
 
 Package rerunfilecheck Info: File `README.out' has not changed.
-(rerunfilecheck)             Checksum: D93AA3AA564DF1EF75108DFD2D9DA409;5918.
+(rerunfilecheck)             Checksum: 239C4185C6AEAF20CB8D33003310416A;2455.
 runsystem(rm ./build//README.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 40154 strings out of 476824
- 869441 string characters out of 5803867
- 1952627 words of memory out of 5000000
- 61251 multiletter control sequences out of 15000+600000
+ 39986 strings out of 476824
+ 858832 string characters out of 5803867
+ 1934627 words of memory out of 5000000
+ 61178 multiletter control sequences out of 15000+600000
  569674 words of font info for 118 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 106i,16n,131p,799b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,15n,131p,799b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/README.pdf (35 pages).
+Output written on build/README.pdf (18 pages).

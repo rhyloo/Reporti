@@ -19,13 +19,13 @@
 
 #+LATEX:\cover[width=1.35\textwidth][next]
 
-# #+begin_quote
-# [!TIP]
+#+begin_quote
+[!TIP]
 
-# *TL;DR:* _I recommend you read ~README.pdf~, it is better._
+*TL;DR:* _I recommend you read ~README.pdf~, it is better._
 
-# I had the great idea of use the template for self documentation and I write in org-mode, so maybe the ~RAW~ of the ~README.org~ is a mesh for you, don't look it.  I recommend you read ~README.pdf~.
-# #+end_quote
+I had the great idea of use the template for self documentation and I write in org-mode, so maybe the ~RAW~ of the ~README.org~ is a mesh for you, don't look it.  I recommend you read ~README.pdf~.
+#+end_quote
 
 * Motivation
 At college I read lot of documents about electronics. One of my favorites was /[[https://e2echina.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf][Op Amps for everyone]]/ from Texas Instruments (TI). If you take a moment to analyse the documents in the ~TI_Examples~ folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a LaTeX template. To be honest with you, I don't use LaTeX where I work, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write good nice reports or notes for some crazy school project. :D
@@ -466,8 +466,9 @@ Encabezados/pies de página. I defined two styles.
         \pagestyle{tocstyle}
     \thispagestyle{tocstyle}
     \iftotallistings    \listoflistings \fi
+    \markright{}     % Limpiar explícitamente rightmark
     }
-  \markright{}     % Limpiar explícitamente rightmark
+
   \clearpage
   %% \markboth{}{}   % Limpiar leftmark y rightmark
   \pagestyle{mainstyle}

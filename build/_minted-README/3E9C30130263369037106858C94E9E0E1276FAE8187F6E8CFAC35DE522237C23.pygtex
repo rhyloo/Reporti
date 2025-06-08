@@ -178,8 +178,9 @@
         \PYG{k}{\PYGZbs{}pagestyle}\PYG{n+nb}{\PYGZob{}}tocstyle\PYG{n+nb}{\PYGZcb{}}
     \PYG{k}{\PYGZbs{}thispagestyle}\PYG{n+nb}{\PYGZob{}}tocstyle\PYG{n+nb}{\PYGZcb{}}
     \PYG{k}{\PYGZbs{}iftotallistings}    \PYG{k}{\PYGZbs{}listoflistings} \PYG{k}{\PYGZbs{}fi}
+    \PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}     \PYG{c}{\PYGZpc{} Limpiar explícitamente rightmark}
     \PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}     \PYG{c}{\PYGZpc{} Limpiar explícitamente rightmark}
+
   \PYG{k}{\PYGZbs{}clearpage}
   \PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZbs{}markboth\PYGZob{}\PYGZcb{}\PYGZob{}\PYGZcb{}   \PYGZpc{} Limpiar leftmark y rightmark}
   \PYG{k}{\PYGZbs{}pagestyle}\PYG{n+nb}{\PYGZob{}}mainstyle\PYG{n+nb}{\PYGZcb{}}

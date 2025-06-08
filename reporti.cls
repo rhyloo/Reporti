@@ -339,8 +339,9 @@
         \pagestyle{tocstyle}
     \thispagestyle{tocstyle}
     \iftotallistings    \listoflistings \fi
+    \markright{}     % Limpiar explícitamente rightmark
     }
-  \markright{}     % Limpiar explícitamente rightmark
+
   \clearpage
   %% \markboth{}{}   % Limpiar leftmark y rightmark
   \pagestyle{mainstyle}

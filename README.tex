@@ -1,4 +1,4 @@
-% Created 2025-06-08 Sun 17:59
+% Created 2025-06-08 Sun 18:02
 % Intended LaTeX compiler: xelatex
 \documentclass[english]{reporti}
 \date{}
@@ -26,8 +26,16 @@
 
 \cover[width=1.35\textwidth][next]
 
+\begin{quote}
+[!TIP]
+
+\textbf{TL;DR:} \uline{I recommend you read \texttt{README.pdf}, it is better.}
+
+I had the great idea of use the template for self documentation and I write in org-mode, so maybe the \texttt{RAW} of the \texttt{README.org} is a mesh for you, don't look it.  I recommend you read \texttt{README.pdf}.
+\end{quote}
+
 \section{Motivation}
-\label{sec:orgd84f760}
+\label{sec:org0a6710a}
 At college I read lot of documents about electronics. One of my favorites was \emph{\href{https://e2echina.ti.com/cfs-file/\_\_key/telligent-evolution-components-attachments/00-52-01-00-00-04-59-46/OP-amp-for-everyone.pdf}{Op Amps for everyone}} from Texas Instruments (TI). If you take a moment to analyse the documents in the \texttt{TI\_Examples} folder from this repository, you will agree with me that they are really well done, with great content and a nice design. So, after some time, I found free time to write a \LaTeX{} template. To be honest with you, I don't use \LaTeX{} where I work, and I am not sure if it's used anywhere else, but maybe I or future generations will have to write good nice reports or notes for some crazy school project. :D
 
 So, here is the first version of Reporti, a Texas Instruments-inspired \LaTeX{} template for you all.
@@ -37,9 +45,9 @@ So, here is the first version of Reporti, a Texas Instruments-inspired \LaTeX{} 
 \end{center}
 
 \section{How to use}
-\label{sec:orga1b60c4}
+\label{sec:orgebf3ae3}
 \subsection{Linux system}
-\label{sec:org3442214}
+\label{sec:orgb2db262}
 Include template on system - If you are planning to use this template with \LaTeX{} with linux download \texttt{reporti.csl} and put it in the path \ldots{}.
 
 \begin{minted}[]{bash}
@@ -52,9 +60,9 @@ find -L /home -samefile ./../Reporti/reporti.cls #
 /home/rhyloo/snap/languagetool/45/Documents/\LaTeX{}/Reporti/reporti.cls
 /home/rhyloo/snap/languagetool/current/Documents/\LaTeX{}/Reporti/reporti.cls
 \section{Features}
-\label{sec:org9b247ea}
+\label{sec:orgd44179b}
 \subsection{Cover page}
-\label{sec:org0c7ca08}
+\label{sec:org0ab1d51}
 Just trying to keep it simple. A .cls file based on report class.
 
 About features, the cover can be customize with the next commands: Check 
@@ -76,7 +84,7 @@ About features, the cover can be customize with the next commands: Check
 \end{listing}
 
 \subsection{Table}
-\label{sec:org1736309}
+\label{sec:org7f12126}
 \begin{table}[H]
 \caption{Changelog}
 \centering
@@ -90,7 +98,7 @@ v0.0 & Initial release & Rhyloo\\[0pt]
 \end{table}
 
 \subsection{Images}
-\label{sec:org5dea5cf}
+\label{sec:org9cf5d28}
 \begin{figure}[htbp]
 \centering
 \includegraphics[fbox,width=.9\linewidth]{./figures/logo/rhyloo_solutions_horizontal.pdf}
@@ -98,7 +106,7 @@ v0.0 & Initial release & Rhyloo\\[0pt]
 \end{figure}
 
 \section{About images}
-\label{sec:org726cbc1}
+\label{sec:orgcbeb805}
 The file \texttt{Logo-EII-horizontal.pdf} doesn't have any type of LICENSE on the \href{https://www.uma.es/escuela-de-ingenierias-industriales/info/108566/logo-simbolo-de-la-eii/}{web}. As master's student I can use, maybe you don't, be careful with it.
 
 I am really interested in naming conventions applied to projects. I think is the first part of a good story, I define two names the first is common use and the second is like a code, i.e Fat-Man is the bomb, but if I said Fat-Man-DOC-123HAJK123
@@ -121,7 +129,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 
 
 \section{About document class}
-\label{sec:org34e7101}
+\label{sec:orga42a8be}
 
 \begin{minted}[]{latex}
 \NeedsTeXFormat{LaTeX2e}
@@ -145,7 +153,7 @@ IMO is the first part of a good story like "MarkII" or "Apollo"
 \end{minted}
 
 \subsection{Packages}
-\label{sec:orga227b98}
+\label{sec:org978f93b}
 I added package geometry becuase I need to config headheight, and page geometry:
 \begin{minted}[]{latex}
 \RequirePackage{geometry}      % Configuración de márgenes
@@ -307,7 +315,7 @@ Encabezados/pies de página. I defined two styles.
 \end{minted}
 
 \subsection{Doument Commands}
-\label{sec:orgf397cff}
+\label{sec:org578908b}
 \begin{minted}[]{latex}
 \newcommand{\@metadata}{} % Registro de metadatos
 
@@ -488,8 +496,9 @@ Encabezados/pies de página. I defined two styles.
         \pagestyle{tocstyle}
     \thispagestyle{tocstyle}
     \iftotallistings    \listoflistings \fi
+    \markright{}     % Limpiar explícitamente rightmark
     }
-  \markright{}     % Limpiar explícitamente rightmark
+
   \clearpage
   %% \markboth{}{}   % Limpiar leftmark y rightmark
   \pagestyle{mainstyle}
@@ -578,13 +587,13 @@ Encabezados/pies de página. I defined two styles.
 \tocloftpagestyle{tocstyle}
 \end{minted}
 \section{Known - Bugs}
-\label{sec:org77e9f58}
+\label{sec:orgde85a39}
 \subsection{{\bfseries\sffamily TODO} If there more than X sections the template do crazy things.}
-\label{sec:org59d5e6f}
+\label{sec:org2737276}
 \subsection{{\bfseries\sffamily TODO} Change langs is not easy as I want.}
-\label{sec:orgb7411d8}
+\label{sec:orga5c0f5d}
 \subsection{{\bfseries\sffamily TODO} Adjust toc style not in header}
-\label{sec:org3eed42c}
+\label{sec:org5008756}
 \subsection{{\bfseries\sffamily TODO} Modificar la web del header}
-\label{sec:org448b3fe}
+\label{sec:org47ed2ce}
 \end{document}
